@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - BlueBlockss</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Define Custom Colors */
+        :root {
+            --electric-blue: #0077FF; /* Primary CTA, Headers, Key Accents */
+            --sunset-orange: #FF7F50; /* Secondary Accent, Highlights */
+            --lime-green: #32CD32; /* Success/Results/Checkmarks */
+            --vivid-purple: #8A2BE2; /* Deeper Accent, Section Background */
+        }
+        
+        /* Utility classes for new colors */
+        .text-electric-blue { color: var(--electric-blue); }
+        .bg-electric-blue { background-color: var(--electric-blue); }
+        .border-electric-blue { border-color: var(--electric-blue); }
+        .text-sunset-orange { color: var(--sunset-orange); }
+        .bg-sunset-orange { background-color: var(--sunset-orange); }
+        .text-lime-green { color: var(--lime-green); }
+        .bg-lime-green { background-color: var(--lime-green); }
+        .text-vivid-purple { color: var(--vivid-purple); }
+        .bg-vivid-purple { background-color: var(--vivid-purple); }
+        
+        /* Custom list style for checkmarks */
+        .check-list li {
+            position: relative;
+            padding-left: 2rem;
+            list-style: none; /* Remove default marker */
+            margin-bottom: 0.5rem;
+        }
+        .check-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 900;
+            color: var(--lime-green); 
+            font-size: 1.25rem;
+        }
+
+        /* Custom list style for standard bullet points (What It Includes) */
+        .solution-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            list-style: none; /* Remove default marker */
+        }
+        .solution-list li::before {
+            content: '\2022'; /* Bullet point character */
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+            color: var(--electric-blue); 
+            font-size: 1.25rem;
+        }
+
+        /* Hero Background Styling */
+        .hero-bg {
+            background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 100%);
+        }
+
+        /* Card Styles */
+        .stage-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .stage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="font-[Inter] text-gray-800 bg-white">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 shadow-lg backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold text-electric-blue tracking-tight">BLUEBLOCKSS</h1>
+            <a href="#cta" class="px-6 py-2 bg-sunset-orange text-white font-semibold rounded-full shadow-lg hover:opacity-90 transition duration-300 ease-in-out">
+                Book Assessment
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-20 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Main Title Block -->
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl sm:text-6xl font-extrabold leading-tight mb-4">
+                    SERVICES — <span class="text-electric-blue">BLUEBLOCKSS</span>
+                </h2>
+                <p class="text-2xl sm:text-3xl font-semibold mb-8 text-gray-700">
+                    Modern ERP-Alternative Solutions for Industrial SMBs
+                </p>
+                <h3 class="text-xl sm:text-2xl font-medium text-gray-600 mb-12">
+                    A Complete Modernization Journey, Designed for Manufacturing, Distribution, Logistics & Warehousing
+                </h3>
+            </div>
+            
+            <!-- Core Pitch Block -->
+            <div class="max-w-5xl mx-auto bg-white p-8 rounded-xl shadow-2xl border-t-8 border-electric-blue text-left">
+                <p class="text-lg sm:text-xl text-gray-700 mb-6">
+                    BlueBlockss delivers a structured, low-risk modernization path for Canadian industrial SMBs.
+                </p>
+                <p class="text-xl font-bold text-gray-800 mb-6">
+                    Our services replace spreadsheets, paper, legacy tools, and disconnected systems with a modern, AI-assisted ERP-alternative operating system built on Zoho + custom engineering.
+                </p>
+                <p class="text-lg font-semibold text-electric-blue mb-3">
+                    Every client follows the same proven transformation journey:
+                </p>
+                
+                <!-- Transformation Stages List -->
+                <ul class="solution-list text-gray-700 text-lg font-medium space-y-2 mb-6 ml-4">
+                    <li>✔ Stage 1 — Blueprint™</li>
+                    <li>✔ Stage 2 — Build (Industrial Core System™ or Industrial OS™)</li>
+                    <li>✔ Advanced — CustomX™</li>
+                    <li>✔ Stage 3 — Optimize+</li>
+                </ul>
+
+                <p class="text-lg mt-4 text-gray-700">
+                    This approach gives you clarity, predictable outcomes, and long-term operational scalability.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformation Journey Visual -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">OUR TRANSFORMATION JOURNEY</h2>
+            <p class="text-xl text-gray-600 mb-8">Modernize your operations using a clear, structured model.</p>
+            
+            <!-- Diagram Placeholder -->
+            <div class="my-8 max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
+                 
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+                <!-- Visual Steps -->
+                <div class="p-6 bg-electric-blue text-white rounded-xl shadow-lg transform hover:scale-[1.03] transition duration-300">
+                    <p class="text-sm font-semibold opacity-70">STEP 1</p>
+                    <h3 class="text-2xl font-bold mt-1">Blueprint™</h3>
+                    <p class="text-sm mt-2 opacity-90">Design the roadmap.</p>
+                </div>
+                <div class="p-6 bg-vivid-purple text-white rounded-xl shadow-lg transform hover:scale-[1.03] transition duration-300">
+                    <p class="text-sm font-semibold opacity-70">STEP 2</p>
+                    <h3 class="text-2xl font-bold mt-1">Build (Core/OS)</h3>
+                    <p class="text-sm mt-2 opacity-90">Implement the system.</p>
+                </div>
+                <div class="p-6 bg-sunset-orange text-white rounded-xl shadow-lg transform hover:scale-[1.03] transition duration-300">
+                    <p class="text-sm font-semibold opacity-70">ADVANCED</p>
+                    <h3 class="text-2xl font-bold mt-1">CustomX™</h3>
+                    <p class="text-sm mt-2 opacity-90">Deep custom engineering.</p>
+                </div>
+                <div class="p-6 bg-lime-green text-white rounded-xl shadow-lg transform hover:scale-[1.03] transition duration-300">
+                    <p class="text-sm font-semibold opacity-70">STEP 3</p>
+                    <h3 class="text-2xl font-bold mt-1">Optimize+</h3>
+                    <p class="text-sm mt-2 opacity-90">Continuous improvement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Detailed Stages -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+            
+            <!-- Stage 1: Blueprint -->
+            <div class="stage-card bg-white p-8 rounded-xl shadow-2xl border-l-8 border-electric-blue grid lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1">
+                    <h3 class="text-4xl font-extrabold text-electric-blue mb-2">Stage 1 — Blueprint™ (Start Here)</h3>
+                    <p class="text-xl font-semibold text-gray-700 mb-4">Your Modernization & ERP-Alternative Roadmap</p>
+                    <p class="text-gray-600 text-lg">
+                        The Blueprint™ is where every engagement begins.
+                        We map your sales, warehouse, production, and finance
+                        workflows — then design your future-state system using Zoho CRM, Inventory,
+                        Books, Creator, Flow, Analytics, and Catalyst.
+                    </p>
+                </div>
+                <div class="lg:col-span-1">
+                    <h4 class="text-xl font-bold text-electric-blue mb-3 border-b pb-1">What It Includes:</h4>
+                    <ul class="solution-list text-gray-700 text-sm">
+                        <li>Workflow mapping</li>
+                        <li>Bottleneck analysis</li>
+                        <li>Automation scoring</li>
+                        <li>Creator app requirements</li>
+                        <li>Catalyst automation logic</li>
+                        <li>System architecture & data model</li>
+                        <li>Integration planning</li>
+                        <li>Roadmap + timeline + budget</li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-1 bg-electric-blue/10 p-6 rounded-lg self-start">
+                    <h4 class="text-xl font-bold text-electric-blue mb-3">Outcome:</h4>
+                    <p class="text-lg text-gray-800 font-semibold">A clear, confident modernization plan.</p>
+                    <a href="#" class="mt-4 inline-block text-electric-blue font-bold hover:underline">
+                        ➡ View Blueprint™
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stage 2: Build - Title -->
+            <div class="text-center">
+                <h3 class="text-3xl font-extrabold text-vivid-purple mb-2">Stage 2 — Build Your System</h3>
+                <p class="text-xl text-gray-600">Choose the implementation path that matches your operations.</p>
+            </div>
+            
+            <!-- Industrial Core System -->
+            <div class="stage-card bg-white p-8 rounded-xl shadow-2xl border-l-8 border-sunset-orange grid lg:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-3xl font-extrabold text-sunset-orange mb-2">Industrial Core System™</h3>
+                    <p class="text-xl font-semibold text-gray-700 mb-4">Fast, Foundational ERP-Alternative System</p>
+                    <p class="text-gray-600 text-lg mb-6">
+                        Ideal for companies upgrading from spreadsheets, Acomba, Sage, or basic tools.
+                    </p>
+                    
+                    <h4 class="text-xl font-bold text-electric-blue mb-3 border-b pb-1">Includes:</h4>
+                    <div class="grid grid-cols-2 gap-x-4">
+                        <ul class="solution-list text-gray-700 text-sm">
+                            <li>CRM setup</li>
+                            <li>Inventory setup</li>
+                            <li>Books workflows</li>
+                            <li>Light automations</li>
+                            <li>Dashboards</li>
+                        </ul>
+                        <ul class="solution-list text-gray-700 text-sm">
+                            <li>Basic Creator app</li>
+                            <li>Security & permissions</li>
+                            <li>Training + go-live support</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-sunset-orange/10 p-6 rounded-lg self-center">
+                    <h4 class="text-xl font-bold text-electric-blue mb-3">Outcome:</h4>
+                    <p class="text-lg text-gray-800 font-semibold">Immediate improvement + scalable ERP foundation.</p>
+                    <a href="#" class="mt-4 inline-block text-electric-blue font-bold hover:underline">
+                        ➡ View Industrial Core System™
+                    </a>
+                </div>
+            </div>
+
+            <!-- Industrial OS -->
+            <div class="stage-card bg-white p-8 rounded-xl shadow-2xl border-l-8 border-vivid-purple grid lg:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-3xl font-extrabold text-vivid-purple mb-2">Industrial OS™</h3>
+                    <p class="text-xl font-semibold text-gray-700 mb-4">Full ERP-Alternative Operating System for Industrial SMBs</p>
+                    <p class="text-gray-600 text-lg mb-6">
+                        Built for companies needing end-to-end automation across sales, inventory, production, QC, warehouse, dispatch, and finance.
+                    </p>
+                    
+                    <h4 class="text-xl font-bold text-electric-blue mb-3 border-b pb-1">Includes:</h4>
+                    <div class="grid grid-cols-2 gap-x-4">
+                        <ul class="solution-list text-gray-700 text-sm">
+                            <li>CRM + Inventory + Books automation</li>
+                            <li>Custom Creator apps (production, QC, warehouse, dispatch)</li>
+                            <li>Catalyst serverless automation</li>
+                            <li>Cross-department workflows</li>
+                        </ul>
+                        <ul class="solution-list text-gray-700 text-sm">
+                            <li>Real-time dashboards</li>
+                            <li>Integrations (SAP, Oracle, Sage, Acomba, Dynamics, NetSuite)</li>
+                            <li>Training, UAT, and hypercare</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-vivid-purple/10 p-6 rounded-lg self-center">
+                    <h4 class="text-xl font-bold text-electric-blue mb-3">Outcome:</h4>
+                    <p class="text-lg text-gray-800 font-semibold">A unified, automated, AI-assisted operating system.</p>
+                    <a href="#" class="mt-4 inline-block text-electric-blue font-bold hover:underline">
+                        ➡ View Industrial OS™
+                    </a>
+                </div>
+            </div>
+
+            <!-- Advanced: CustomX -->
+            <div class="stage-card bg-white p-8 rounded-xl shadow-2xl border-l-8 border-sunset-orange grid lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1">
+                    <h3 class="text-4xl font-extrabold text-sunset-orange mb-2">Advanced — BlueBlockss CustomX™</h3>
+                    <p class="text-xl font-semibold text-gray-700 mb-4">Deep Custom Engineering Beyond Standard ERPs</p>
+                    <p class="text-gray-600 text-lg">
+                        For companies with unique, complex, or non-standard workflows.
+                    </p>
+                </div>
+                <div class="lg:col-span-1">
+                    <h4 class="text-xl font-bold text-electric-blue mb-3 border-b pb-1">Built Using:</h4>
+                    <ul class="solution-list text-gray-700 text-sm">
+                        <li>Zoho Creator</li>
+                        <li>Zoho Catalyst</li>
+                        <li>Python</li>
+                        <li>APIs</li>
+                        <li>Microservices</li>
+                        <li>Serverless compute</li>
+                        <li>ETL pipelines</li>
+                        <li>Custom dashboards</li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-1">
+                    <h4 class="text-xl font-bold text-electric-blue mb-3 border-b pb-1">Used For:</h4>
+                    <ul class="solution-list text-gray-700 text-sm">
+                        <li>Production systems</li>
+                        <li>Warehouse automation</li>
+                        <li>Field service & dispatch</li>
+                        <li>Customer/vendor portals</li>
+                        <li>QC/inspection</li>
+                        <li>Real-time logic workflows</li>
+                    </ul>
+                    <a href="#" class="mt-4 inline-block text-sunset-orange font-bold hover:underline">
+                        ➡ View CustomX™
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stage 3: Optimize+ -->
+            <div class="stage-card bg-white p-8 rounded-xl shadow-2xl border-l-8 border-lime-green grid lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-1">
+                    <h3 class="text-4xl font-extrabold text-lime-green mb-2">Stage 3 — Optimize+</h3>
+                    <p class="text-xl font-semibold text-gray-700 mb-4">Continuous Improvement & Support</p>
+                    <p class="text-gray-600 text-lg">
+                        Operations change — your system should evolve with it.
+                    </p>
+                </div>
+                <div class="lg:col-span-1">
+                    <h4 class="text-xl font-bold text-electric-blue mb-3 border-b pb-1">Includes:</h4>
+                    <ul class="solution-list text-gray-700 text-sm">
+                        <li>Enhancements & improvements</li>
+                        <li>Creator app updates</li>
+                        <li>Catalyst logic maintenance</li>
+                        <li>Dashboard optimization</li>
+                        <li>Training & onboarding</li>
+                        <li>Quarterly reviews</li>
+                        <li>Error resolution</li>
+                        <li>Security/governance checks</li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-1 bg-lime-green/10 p-6 rounded-lg self-start">
+                    <h4 class="text-xl font-bold text-electric-blue mb-3">Outcome:</h4>
+                    <p class="text-lg text-gray-800 font-semibold">Stability, optimization, and long-term scalability.</p>
+                    <a href="#" class="mt-4 inline-block text-lime-green font-bold hover:underline">
+                        ➡ View Optimize+
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Why This Works -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-electric-blue mb-6 border-b-2 pb-2 border-electric-blue/50">
+                WHY THIS WORKS
+            </h2>
+            <ul class="check-list text-xl text-gray-800 space-y-3">
+                <li>A structured journey (not random IT work)</li>
+                <li>ERP-grade workflow automation</li>
+                <li>AI-assisted insights & decision support</li>
+                <li>Modernization without $200k ERP costs</li>
+                <li>Industrial-focused expertise</li>
+                <li>Zoho ecosystem mastery</li>
+                <li>Custom engineering for complex workflows</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- Final CTA Section -->
+    <section id="cta" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-sunset-orange">READY TO START WITH BLUEPRINT™?</h2>
+            <p class="text-xl font-medium mb-8 text-white">Every transformation begins with a clear plan.</p>
+            
+            <a href="#" class="inline-block px-10 py-4 bg-electric-blue text-white text-xl font-bold rounded-full shadow-xl hover:bg-electric-blue/90 transition duration-300 ease-in-out transform hover:scale-[1.05] mb-4">
+                ➡ Book Your Modernization Assessment
+            </a>
+            <p class="text-lg font-medium text-gray-200">
+                ➡ <a href="mailto:info@blueblocks.ai" class="text-sunset-orange hover:underline">info@blueblocks.ai</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 BlueBlockss. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
