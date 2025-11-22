@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industries We Serve - BlueBlockss</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Define Custom Colors */
+        :root {
+            --electric-blue: #0077FF; /* Primary CTA, Headers, Key Accents */
+            --sunset-orange: #FF7F50; /* Secondary Accent, Highlights */
+            --lime-green: #32CD32; /* Success/Results/Checkmarks */
+            --vivid-purple: #8A2BE2; /* Deeper Accent, Section Background */
+        }
+        
+        /* Utility classes for new colors */
+        .text-electric-blue { color: var(--electric-blue); }
+        .bg-electric-blue { background-color: var(--electric-blue); }
+        .border-electric-blue { border-color: var(--electric-blue); }
+        .text-sunset-orange { color: var(--sunset-orange); }
+        .bg-sunset-orange { background-color: var(--sunset-orange); }
+        .text-lime-green { color: var(--lime-green); }
+        .bg-lime-green { background-color: var(--lime-green); }
+        .text-vivid-purple { color: var(--vivid-purple); }
+        .bg-vivid-purple { background-color: var(--vivid-purple); }
+        
+        /* Custom list style for standard bullet points (What BlueBlockss Delivers) */
+        .solution-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            list-style: none; /* Remove default marker */
+        }
+        .solution-list li::before {
+            content: '\2022'; /* Bullet point character */
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+            color: var(--electric-blue); 
+            font-size: 1.25rem;
+        }
+
+        /* Custom list style for expected outcomes (Checkmark) */
+        .outcome-list li {
+            position: relative;
+            padding-left: 2rem;
+            font-weight: 600;
+            list-style: none; /* Remove default marker */
+        }
+        .outcome-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 900;
+            color: var(--lime-green); 
+            font-size: 1.25rem;
+        }
+
+        /* Simple Fade-In Animation */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero Background Styling */
+        .hero-bg {
+            background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 100%);
+        }
+
+        /* Card Styles */
+        .industry-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .industry-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-[Inter] text-gray-800 bg-white">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 shadow-lg backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold text-electric-blue tracking-tight">BLUEBLOCKSS</h1>
+            <a href="#cta" class="px-6 py-2 bg-sunset-orange text-white font-semibold rounded-full shadow-lg hover:opacity-90 transition duration-300 ease-in-out">
+                Book Assessment
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-20 md:py-32 fade-in-section is-visible">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Main Title Block -->
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl sm:text-6xl font-extrabold leading-tight mb-4">
+                    INDUSTRIES WE SERVE — <span class="text-electric-blue">BLUEBLOCKSS</span>
+                </h2>
+                <p class="text-2xl sm:text-3xl font-semibold mb-8 text-gray-700">
+                    <span class="inline-block bg-vivid-purple text-white px-4 py-1 rounded-lg">AI-Assisted</span> ERP-Alternative Solutions for Canadian Industrial SMBs
+                </p>
+                <h3 class="text-xl sm:text-2xl font-medium text-gray-600 mb-12">
+                    Modernizing <span class="text-sunset-orange font-bold">Manufacturing, Distribution, Logistics & Warehousing Operations</span>
+                </h3>
+            </div>
+            
+            <!-- Core Pitch Block -->
+            <div class="max-w-5xl mx-auto bg-white p-8 rounded-xl shadow-2xl border-t-8 border-electric-blue text-left">
+                <p class="text-lg sm:text-xl text-gray-700 mb-4">
+                    BlueBlockss primarily works with industrial companies whose operations depend on accuracy, speed, and real-time visibility.
+                </p>
+                <p class="text-xl font-bold text-gray-800 mb-6">
+                    We deliver a modern ERP-alternative operating system that replaces spreadsheets, paper, legacy tools, and disconnected workflows.
+                </p>
+                <p class="text-lg font-semibold text-electric-blue mb-3">
+                    Our solutions combine:
+                </p>
+                <div class="grid md:grid-cols-2 gap-x-8 solution-list text-gray-700">
+                    <p>Zoho’s cloud ecosystem</p>
+                    <p>Custom Creator apps</p>
+                    <p>Serverless Catalyst automation</p>
+                    <p>Enterprise integrations</p>
+                    <p>Real-time analytics</p>
+                    <p>AI-assisted insights</p>
+                </div>
+                <p class="text-lg mt-4 text-gray-700">
+                    …to create a connected, automated industrial operation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Cards Section -->
+    <section id="industries" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-gray-900 text-center mb-12">Targeted Industry Solutions</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                
+                <!-- Card 1: Manufacturing -->
+                <div class="industry-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-vivid-purple fade-in-section">
+                    <h3 class="text-3xl font-extrabold text-vivid-purple mb-2">Manufacturing</h3>
+                    <p class="text-xl font-semibold text-gray-700 mb-6">Smart, Connected Production Workflows</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Challenges -->
+                        <div>
+                            <h4 class="text-lg font-bold text-electric-blue mb-2">Operational Challenges</h4>
+                            <ul class="solution-list text-gray-700 text-sm">
+                                <li>Paper travelers & manual job routing</li>
+                                <li>Spreadsheets for scheduling</li>
+                                <li>Manual quality forms</li>
+                                <li>Disconnected purchasing → production → shipping</li>
+                                <li>Zero real-time WIP visibility</li>
+                                <li>Outdated systems that no longer scale</li>
+                            </ul>
+                        </div>
+                        <!-- Delivers -->
+                        <div>
+                            <h4 class="text-lg font-bold text-electric-blue mb-2">What BlueBlockss Delivers</h4>
+                            <ul class="solution-list text-gray-700 text-sm">
+                                <li>Production/assembly tracking apps</li>
+                                <li>Work order routing</li>
+                                <li>Digital QC/inspection</li>
+                                <li>Material availability automation</li>
+                                <li>Supplier & partner portals</li>
+                                <li>Warehouse task automation</li>
+                                <li>Dispatch & driver workflows</li>
+                                <li>Real-time WIP dashboards</li>
+                                <li>AI-assisted forecasting (Zia + Analytics)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-200">
+                        <h4 class="text-lg font-bold text-electric-blue mb-2">Expected Outcomes</h4>
+                        <ul class="outcome-list text-gray-800 space-y-1">
+                            <li>30–60% fewer manual tasks</li>
+                            <li>Clear work-in-progress visibility</li>
+                            <li>Better QC accuracy</li>
+                            <li>Faster job completion cycles</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2: Distribution & Wholesale -->
+                <div class="industry-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-sunset-orange fade-in-section">
+                    <h3 class="text-3xl font-extrabold text-sunset-orange mb-2">Distribution & Wholesale</h3>
+                    <p class="text-xl font-semibold text-gray-700 mb-6">Integrated Sales → Inventory → Fulfillment</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Challenges -->
+                        <div>
+                            <h4 class="text-lg font-bold text-electric-blue mb-2">Operational Challenges</h4>
+                            <ul class="solution-list text-gray-700 text-sm">
+                                <li>Manual stock checks</li>
+                                <li>Paper pick lists</li>
+                                <li>Slow quoting and ordering</li>
+                                <li>Complex pricing</li>
+                                <li>Siloed CRM and Inventory</li>
+                                <li>No real-time warehouse visibility</li>
+                            </ul>
+                        </div>
+                        <!-- Delivers -->
+                        <div>
+                            <h4 class="text-lg font-bold text-electric-blue mb-2">What BlueBlockss Delivers</h4>
+                            <ul class="solution-list text-gray-700 text-sm">
+                                <li>CRM + Inventory + Books automation</li>
+                                <li>Digital picking/packing workflows</li>
+                                <li>Barcode/QR integrations</li>
+                                <li>Reorder & replenishment rules</li>
+                                <li>B2B customer ordering portals</li>
+                                <li>Delivery routing automation</li>
+                                <li>AI-assisted sales & demand insights</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-200">
+                        <h4 class="text-lg font-bold text-electric-blue mb-2">Expected Outcomes</h4>
+                        <ul class="outcome-list text-gray-800 space-y-1">
+                            <li>25–40% better fulfillment accuracy</li>
+                            <li>Faster quote → order → ship cycles</li>
+                            <li>Precise inventory visibility</li>
+                            <li>Reduced labour & errors</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3: Logistics & Fleet Operations -->
+                <div class="industry-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-electric-blue fade-in-section">
+                    <h3 class="text-3xl font-extrabold text-electric-blue mb-2">Logistics & Fleet Operations</h3>
+                    <p class="text-xl font-semibold text-gray-700 mb-6">Real-Time Dispatch, Driver Apps & Load Tracking</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Challenges -->
+                        <div>
+                            <h4 class="text-lg font-bold text-electric-blue mb-2">Operational Challenges</h4>
+                            <ul class="solution-list text-gray-700 text-sm">
+                                <li>Manual dispatch boards</li>
+                                <li>Phone/text-based driver communication</li>
+                                <li>Paper PODs</li>
+                                <li>No centralized fleet visibility</li>
+                                <li>Admin-heavy recordkeeping</li>
+                            </ul>
+                        </div>
+                        <!-- Delivers -->
+                        <div>
+                            <h4 class="text-lg font-bold text-electric-blue mb-2">What BlueBlockss Delivers</h4>
+                            <ul class="solution-list text-gray-700 text-sm">
+                                <li>Dispatch management console</li>
+                                <li>Mobile driver/technician apps</li>
+                                <li>Digital POD collection</li>
+                                <li>Route planning & optimization</li>
+                                <li>Fleet maintenance workflows</li>
+                                <li>Customer-facing shipment tracking portals</li>
+                                <li>AI-assisted ETA predictions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-200">
+                        <h4 class="text-lg font-bold text-electric-blue mb-2">Expected Outcomes</h4>
+                        <ul class="outcome-list text-gray-800 space-y-1">
+                            <li>Faster dispatch decisions</li>
+                            <li>Improved driver communication</li>
+                            <li>Real-time load status</li>
+                            <li>Lower admin burden</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4: Warehousing & Fulfillment -->
+                <div class="industry-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-vivid-purple fade-in-section">
+                    <h3 class="text-3xl font-extrabold text-vivid-purple mb-2">Warehousing & Fulfillment</h3>
+                    <p class="text-xl font-semibold text-gray-700 mb-6">Mobile, Automated Warehouse Processes</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Challenges -->
+                        <div>
+                            <h4 class="text-lg font-bold text-electric-blue mb-2">Operational Challenges</h4>
+                            <ul class="solution-list text-gray-700 text-sm">
+                                <li>Manual receiving & putaway</li>
+                                <li>No bin-level tracking</li>
+                                <li>Errors in picking & packing</li>
+                                <li>Slow cycle counts</li>
+                                <li>Inaccurate adjustments</li>
+                            </ul>
+                        </div>
+                        <!-- Delivers -->
+                        <div>
+                            <h4 class="text-lg font-bold text-electric-blue mb-2">What BlueBlockss Delivers</h4>
+                            <ul class="solution-list text-gray-700 text-sm">
+                                <li>Mobile receiving & putaway</li>
+                                <li>Bin/rack location tracking</li>
+                                <li>Pick/pack/ship automation</li>
+                                <li>Inventory reconciliation tools</li>
+                                <li>Cycle count automation</li>
+                                <li>Barcode scanning</li>
+                                <li>Warehouse dashboards</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-200">
+                        <h4 class="text-lg font-bold text-electric-blue mb-2">Expected Outcomes</h4>
+                        <ul class="outcome-list text-gray-800 space-y-1">
+                            <li>Fewer warehouse errors</li>
+                            <li>Faster movement of goods</li>
+                            <li>Accurate bin-level visibility</li>
+                            <li>More efficient labour usage</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 5: Industrial Supply -->
+                <div class="industry-card bg-white p-8 rounded-xl shadow-lg border-t-4 border-sunset-orange lg:col-span-2 max-w-4xl mx-auto fade-in-section">
+                    <h3 class="text-3xl font-extrabold text-sunset-orange mb-2">Industrial Supply</h3>
+                    <p class="text-xl font-semibold text-gray-700 mb-6">End-to-End Automation for High-Volume B2B Operations</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <!-- Challenges -->
+                        <div>
+                            <h4 class="text-lg font-bold text-electric-blue mb-2">Operational Challenges</h4>
+                            <ul class="solution-list text-gray-700 text-sm">
+                                <li>Complex quoting</li>
+                                <li>Thousands of SKUs</li>
+                                <li>Manual purchasing</li>
+                                <li>Disconnected CRM/Inventory</li>
+                                <li>No customer portal</li>
+                                <li>Paper-based RMAs or warranty processes</li>
+                            </ul>
+                        </div>
+                        <!-- Delivers -->
+                        <div>
+                            <h4 class="text-lg font-bold text-electric-blue mb-2">What BlueBlockss Delivers</h4>
+                            <ul class="solution-list text-gray-700 text-sm">
+                                <li>Advanced quoting workflows</li>
+                                <li>Real-time stock availability</li>
+                                <li>Automated purchasing & replenishment</li>
+                                <li>RMA, warranty & service workflows</li>
+                                <li>B2B customer portals (Commerce)</li>
+                                <li>Recurring billing (Subscriptions)</li>
+                                <li>Dispatch & returns automation</li>
+                                <li>AI-assisted demand & sales insights</li>
+                            </ul>
+                        </div>
+                        <!-- Outcomes -->
+                        <div class="p-4 bg-sunset-orange/10 rounded-lg">
+                            <h4 class="text-lg font-bold text-electric-blue mb-2">Expected Outcomes</h4>
+                            <ul class="outcome-list text-gray-800 space-y-1">
+                                <li>Faster quoting</li>
+                                <li>Accurate pricing & availability</li>
+                                <li>Improved customer experience</li>
+                                <li>Lower operational overhead</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ideal Client & Why Choose Us -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12">
+            
+            <!-- Ideal Client Profile -->
+            <div class="fade-in-section">
+                <h2 class="text-3xl font-bold text-electric-blue mb-6 border-b-2 pb-2 border-electric-blue/50">
+                    Ideal Client Profile
+                </h2>
+                <p class="text-lg text-gray-700 mb-4">
+                    BlueBlockss primarily partners with Canadian industrial SMBs, including:
+                </p>
+                <ul class="solution-list text-gray-800 text-lg ml-4">
+                    <li>Manufacturers</li>
+                    <li>Distributors & wholesalers</li>
+                    <li>Logistics & fleet operators</li>
+                    <li>Warehouses & fulfillment centers</li>
+                    <li>Industrial supply companies</li>
+                </ul>
+                <div class="mt-6 bg-gray-100 p-4 rounded-lg border-l-4 border-sunset-orange">
+                    <p class="font-bold text-gray-800">Ideal revenue range: $5M–$50M</p>
+                    <p class="text-sm text-gray-600">(With flexibility for growing SMBs slightly below or above this range.)</p>
+                </div>
+            </div>
+            
+            <!-- Why Industrial Clients Choose BlueBlockss -->
+            <div class="fade-in-section">
+                <h2 class="text-3xl font-bold text-electric-blue mb-6 border-b-2 pb-2 border-electric-blue/50">
+                    Why Industrial Clients Choose BlueBlockss
+                </h2>
+                <ul class="outcome-list text-lg text-gray-800 space-y-3">
+                    <li>ERP-alternative approach (modern system without SAP/NetSuite costs)</li>
+                    <li>Deep industrial operations knowledge</li>
+                    <li>AI-assisted analytics & insights</li>
+                    <li>Zoho ecosystem mastery (CRM, Inventory, Books, Creator, Flow, Analytics, Catalyst)</li>
+                    <li>CustomX™ engineering (Python, APIs, microservices, serverless)</li>
+                    <li>Secure, compliant architecture (PIPEDA/SOC2-aligned)</li>
+                    <li>Canadian-led discovery + scalable offshore development</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="cta" class="py-20 bg-gray-900 text-white fade-in-section">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-bright-yellow">Ready to Modernize Your Industry Operations?</h2>
+            <p class="text-xl font-medium mb-8 text-white">Let’s design your new AI-assisted ERP-alternative operating system.</p>
+            
+            <a href="#" class="inline-block px-10 py-4 bg-sunset-orange text-white text-xl font-bold rounded-full shadow-xl hover:bg-sunset-orange/90 transition duration-300 ease-in-out transform hover:scale-[1.05] mb-4">
+                ➡ Book Your Modernization Assessment
+            </a>
+            <p class="text-lg font-medium text-gray-200">
+                ➡ Contact: <a href="mailto:info@blueblocks.ai" class="text-bright-yellow hover:underline">info@blueblocks.ai</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 BlueBlockss. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Scroll-based Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+            
+            // Exclude the hero section from observation since it should be visible immediately
+            const fadeSections = document.querySelectorAll('.fade-in-section:not(.is-visible)');
+            fadeSections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Manually add 'is-visible' to the hero section which is initially set to fade-in-section
+            document.querySelector('.hero-bg').classList.add('is-visible');
+        });
+    </script>
+</body>
+</html>
