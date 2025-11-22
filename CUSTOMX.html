@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CustomX™ - Advanced Engineering</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Define Custom Colors (Consistent with previous pages) */
+        :root {
+            --electric-blue: #0077FF; /* System & Platform */
+            --sunset-orange: #FF7F50; /* Accent, emphasizing 'Custom' and 'Advanced' */
+            --lime-green: #32CD32; /* Success/Results/Checkmarks */
+            --vivid-purple: #8A2BE2; /* Secondary Accent (Engineering/Logic) */
+        }
+        
+        /* Utility classes for new colors */
+        .text-electric-blue { color: var(--electric-blue); }
+        .bg-electric-blue { background-color: var(--electric-blue); }
+        .border-electric-blue { border-color: var(--electric-blue); }
+        .text-sunset-orange { color: var(--sunset-orange); }
+        .bg-sunset-orange { background-color: var(--sunset-orange); }
+        .text-lime-green { color: var(--lime-green); }
+        .bg-lime-green { background-color: var(--lime-green); }
+        .text-vivid-purple { color: var(--vivid-purple); }
+        .bg-vivid-purple { background-color: var(--vivid-purple); }
+        
+        /* Custom list style for checkmarks (What Is / Outcomes / What Comes Next) */
+        .check-list li {
+            position: relative;
+            padding-left: 2rem;
+            list-style: none; /* Remove default marker */
+            margin-bottom: 0.5rem;
+        }
+        .check-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 900;
+            color: var(--lime-green); 
+            font-size: 1.25rem;
+        }
+
+        /* Custom list style for standard bullet points (Used in Who It's For, What We Build sub-lists, and When to Choose) */
+        .solution-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            list-style: none; /* Remove default marker */
+        }
+        .solution-list li::before {
+            content: '\2022'; /* Bullet point character */
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+            color: var(--sunset-orange); 
+            font-size: 1.25rem;
+        }
+        
+        /* Hero Background Styling - Focus on technical depth (darker background) */
+        .hero-bg {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%); /* Dark gray/slate for engineering feel */
+        }
+
+        /* Numbered list for 'What We Build' */
+        .numbered-list {
+            counter-reset: item;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .numbered-list > li {
+            counter-increment: item;
+            margin-bottom: 2.5rem;
+            padding-left: 0; 
+            position: relative;
+        }
+        .numbered-list > li > div {
+            padding-left: 2rem; /* Indent the content */
+        }
+        .numbered-list > li::before {
+            content: counter(item) ".";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.75rem; /* Larger number */
+            font-weight: bold;
+            color: var(--vivid-purple); /* Emphasize technology/logic */
+        }
+    </style>
+</head>
+<body class="font-[Inter] text-gray-800 bg-white">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 shadow-lg backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold text-electric-blue tracking-tight">BLUEBLOCKSS</h1>
+            <a href="#cta" class="px-6 py-2 bg-sunset-orange text-white font-semibold rounded-full shadow-lg hover:opacity-90 transition duration-300 ease-in-out">
+                Start with Blueprint™
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-20 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Main Title Block -->
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl sm:text-6xl font-extrabold leading-tight mb-4 text-sunset-orange">
+                    CUSTOMX™
+                </h2>
+                <p class="text-2xl sm:text-3xl font-semibold mb-6 text-gray-200">
+                    Advanced Industrial Automation & Custom Engineering
+                </p>
+                <h3 class="text-xl sm:text-2xl font-medium text-gray-400 mb-12">
+                    Built with Zoho Creator, Zoho Catalyst, Python, APIs & Enterprise Integrations
+                </h3>
+            </div>
+            
+            <!-- Core Pitch Block -->
+            <div class="max-w-5xl mx-auto bg-white p-8 rounded-xl shadow-2xl border-t-8 border-vivid-purple text-left">
+                <p class="text-lg text-gray-700 mb-6">
+                    Some industrial processes cannot be solved with standard
+                    CRM, Inventory, or ERP logic.
+                </p>
+                <p class="text-xl font-bold text-electric-blue mb-6">
+                    That’s where BlueBlockss CustomX™ comes in — our
+                    advanced engineering layer that builds enterprise-grade custom apps,
+                    serverless automation, and deep integrations tailored to your exact
+                    workflows.
+                </p>
+                <p class="text-lg text-gray-700">
+                    CustomX™ is for industrial companies that outgrow simple
+                    tools and need serious automation, complex logic, or unique
+                    operational systems that ERPs cannot deliver.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is CustomX? -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-vivid-purple mb-6 border-b-2 pb-2 border-vivid-purple/50">
+                WHAT IS CUSTOMX™?
+            </h2>
+            
+            <div class="grid lg:grid-cols-2 lg:gap-12">
+                <div class="p-6 bg-vivid-purple/10 rounded-xl shadow-inner">
+                    <p class="text-xl font-semibold text-gray-800 mb-4">
+                        CustomX™ is a specialized engineering service that expands
+                        Zoho into a full custom automation platform using:
+                    </p>
+                    <!-- Engineering Stack List -->
+                    <div class="grid sm:grid-cols-2 gap-x-6 text-gray-700 text-lg">
+                        <ul class="check-list">
+                            <li>Zoho Creator — custom industrial applications</li>
+                            <li>Zoho Catalyst — serverless backend logic & compute</li>
+                            <li>Python — heavy logic, ETL workflows, transformation pipelines</li>
+                            <li>JavaScript — UI/UX, client-side logic, workflow enhancements</li>
+                        </ul>
+                        <ul class="check-list">
+                            <li>REST & SOAP APIs — integrations with enterprise systems</li>
+                            <li>Serverless microservices — event-driven automation</li>
+                            <li>Data pipelines — for ETL, analytics, and reporting</li>
+                            <li>Secure architecture — identity, access, compliance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-lg mt-8 lg:mt-0 border-t-4 border-sunset-orange self-center">
+                    <p class="text-xl font-bold text-gray-800">
+                        We build solutions normally only available in expensive ERP
+                        ecosystems — without ERP cost or rigidity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-sunset-orange mb-8 border-b-2 pb-2 border-sunset-orange/50">
+                WHO IT’S FOR
+            </h2>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">
+                        CustomX™ is ideal for companies that:
+                    </h3>
+                    <ul class="solution-list text-lg text-gray-800 space-y-2">
+                        <li>Have complex processes impossible to manage in standard software</li>
+                        <li>Need custom industrial applications (production, QC, warehouse, dispatch, etc.)</li>
+                        <li>Require deep automation or non-standard logic</li>
+                        <li>Need AI-assisted insights, anomaly detection, or data intelligence</li>
+                        <li>Require API integration with ERP, accounting, or legacy platforms</li>
+                        <li>Need systems that scale across facilities, regions, or lines of business</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-electric-blue/10 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">
+                        Typical use cases:
+                    </h3>
+                    <ul class="solution-list text-lg text-gray-800 space-y-2">
+                        <li>Manufacturers with custom production flows</li>
+                        <li>Logistics businesses with mobile dispatch workflows</li>
+                        <li>Warehouses needing barcode, bin tracking, or task automation</li>
+                        <li>Distributors requiring custom pricing, rules, or portals</li>
+                        <li>Companies with on-premise or hybrid legacy systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Build (Detailed List) -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-electric-blue mb-6 border-b-2 pb-2 border-electric-blue/50">
+                WHAT WE BUILD
+            </h2>
+            <p class="text-xl text-gray-700 mb-8">
+                Below is a clear list of the types of custom systems BlueBlockss can create.
+            </p>
+
+            <ul class="numbered-list grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-6">
+                
+                <!-- 1. Custom Production & Assembly Systems -->
+                <li class="p-4 bg-white rounded-lg shadow-md border-t-4 border-vivid-purple">
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-3">Custom Production & Assembly Systems</p>
+                        <p class="text-gray-700 mb-3 font-semibold text-sm">Built with Creator + Catalyst</p>
+                        <ul class="solution-list text-sm text-gray-600">
+                            <li>Work orders</li>
+                            <li>Job routing</li>
+                            <li>BOM automation</li>
+                            <li>WIP tracking</li>
+                            <li>Production dashboards</li>
+                            <li>Machine-level QC</li>
+                            <li>Line balancing automation</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- 2. Advanced Warehouse Automation -->
+                <li class="p-4 bg-white rounded-lg shadow-md border-t-4 border-vivid-purple">
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-3">Advanced Warehouse Automation</p>
+                        <ul class="solution-list text-sm text-gray-600">
+                            <li>Pick/pack/ship automation</li>
+                            <li>Mobile warehouse apps</li>
+                            <li>Barcode scanning</li>
+                            <li>Bin/location logic</li>
+                            <li>Putaway & movement workflows</li>
+                            <li>Warehouse task engines</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- 3. Dispatch, Field Service & Fleet Automation -->
+                <li class="p-4 bg-white rounded-lg shadow-md border-t-4 border-vivid-purple">
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-3">Dispatch, Field Service & Fleet Automation</p>
+                        <ul class="solution-list text-sm text-gray-600">
+                            <li>Driver mobile apps</li>
+                            <li>Route planning</li>
+                            <li>GPS check-ins</li>
+                            <li>Proof of delivery</li>
+                            <li>Dispatch queues</li>
+                            <li>Real-time integration with CRM & Inventory</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- 4. QC & Industrial Compliance Modules -->
+                <li class="p-4 bg-white rounded-lg shadow-md border-t-4 border-vivid-purple">
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-3">QC & Industrial Compliance Modules</p>
+                        <ul class="solution-list text-sm text-gray-600">
+                            <li>Inspection forms</li>
+                            <li>Pass/Fail automation</li>
+                            <li>Non-conformance workflows</li>
+                            <li>Corrective actions</li>
+                            <li>Traceability logs</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- 5. Customer & Vendor Portals -->
+                <li class="p-4 bg-white rounded-lg shadow-md border-t-4 border-vivid-purple">
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-3">Customer & Vendor Portals</p>
+                        <ul class="solution-list text-sm text-gray-600">
+                            <li>Online ordering</li>
+                            <li>Ticketing support</li>
+                            <li>Shipment tracking</li>
+                            <li>PO/Invoice history</li>
+                            <li>Document repositories</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- 6. AI-Assisted Analytics & Decision Support -->
+                <li class="p-4 bg-white rounded-lg shadow-md border-t-4 border-vivid-purple">
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-3">AI-Assisted Analytics & Decision Support</p>
+                        <p class="text-gray-700 mb-3 font-semibold text-sm">Powered by Zoho Analytics + Zia + Catalyst</p>
+                        <ul class="solution-list text-sm text-gray-600">
+                            <li>Forecasting</li>
+                            <li>Pattern detection</li>
+                            <li>Anomaly alerts</li>
+                            <li>Performance scoring</li>
+                            <li>Predictive maintenance (where applicable)</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- 7. Enterprise Integrations -->
+                <li class="p-4 bg-white rounded-lg shadow-md border-t-4 border-vivid-purple">
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-3">Enterprise Integrations</p>
+                        <p class="text-gray-700 mb-3 font-semibold text-sm">We integrate Zoho with:</p>
+                        <div class="grid grid-cols-2 text-sm text-gray-600">
+                            <ul class="solution-list">
+                                <li>SAP</li>
+                                <li>Oracle</li>
+                                <li>Dynamics 365</li>
+                                <li>NetSuite</li>
+                            </ul>
+                            <ul class="solution-list">
+                                <li>Sage</li>
+                                <li>Acomba</li>
+                                <li>IBM systems</li>
+                                <li>Homegrown legacy tools</li>
+                            </ul>
+                        </div>
+                        <p class="text-gray-700 mt-4 font-semibold text-sm">Using:</p>
+                        <ul class="solution-list text-sm text-gray-600">
+                            <li>REST/SOAP APIs</li>
+                            <li>Python ETL pipelines</li>
+                            <li>Serverless microservices</li>
+                            <li>Scheduled jobs</li>
+                            <li>Event-driven automation</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- 8. Automation Engines & Microservices -->
+                <li class="p-4 bg-white rounded-lg shadow-md border-t-4 border-vivid-purple">
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-3">Automation Engines & Microservices</p>
+                        <p class="text-gray-700 mb-3 font-semibold text-sm">Catalyst-powered automation such as:</p>
+                        <ul class="solution-list text-sm text-gray-600">
+                            <li>Order allocation logic</li>
+                            <li>Production scheduling engines</li>
+                            <li>Document generation (PDF, Excel, labels)</li>
+                            <li>Inventory syncing with external systems</li>
+                            <li>Alerts & escalation workflows</li>
+                            <li>AI-assisted anomaly detection</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- What's Included in a CustomX Engagement -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-sunset-orange mb-6 border-b-2 pb-2 border-sunset-orange/50">
+                WHAT’S INCLUDED IN A CUSTOMX™ ENGAGEMENT
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-lg text-gray-800">
+                <ul class="solution-list space-y-2">
+                    <li>Full discovery (via Blueprint™ or standalone)</li>
+                    <li>Technical architecture</li>
+                    <li>Custom development across Creator, Catalyst, Python</li>
+                    <li>Integrations (API, ETL, hybrid)</li>
+                </ul>
+                <ul class="solution-list space-y-2">
+                    <li>Quality assurance & testing</li>
+                    <li>Data migration (if needed)</li>
+                    <li>Deployment & go-live</li>
+                    <li>Documentation & SOPs</li>
+                </ul>
+                <ul class="solution-list space-y-2">
+                    <li>Training for internal teams</li>
+                    <li>Optional Optimize+ expansion</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes You Can Expect -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-lime-green mb-6 border-b-2 pb-2 border-lime-green/50">
+                OUTCOMES YOU CAN EXPECT
+            </h2>
+            <div class="grid lg:grid-cols-2 gap-x-12 gap-y-4">
+                <ul class="check-list text-xl text-gray-800 space-y-2">
+                    <li>Custom workflows that perfectly match your operation</li>
+                    <li>Automation that standard tools & ERPs cannot deliver</li>
+                    <li>Deep system intelligence & AI-driven insights</li>
+                    <li>Faster, more accurate operations</li>
+                </ul>
+                <ul class="check-list text-xl text-gray-800 space-y-2">
+                    <li>Scalable systems for long-term growth</li>
+                    <li>Full integration with your existing platforms</li>
+                    <li>Reduced manual decision-making</li>
+                </ul>
+            </div>
+            <div class="mt-8 p-6 bg-vivid-purple/10 rounded-xl">
+                <p class="text-xl font-bold text-gray-800">
+                    CustomX™ is the difference between “trying to fit your
+                    business into software”
+                </p>
+                <p class="text-xl font-bold text-sunset-orange mt-2">
+                    and
+                </p>
+                <p class="text-xl font-bold text-gray-800 mt-2">
+                    “building software that fits your business.”
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- When to Choose -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-electric-blue mb-6 border-b-2 pb-2 border-electric-blue/50">
+                WHEN TO CHOOSE CUSTOMX™
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <ul class="solution-list text-lg text-gray-800 space-y-2">
+                    <li>Custom production logic</li>
+                    <li>Complex fulfillment rules</li>
+                    <li>Field operations or dispatch workflows</li>
+                    <li>High-volume automation</li>
+                </ul>
+                <ul class="solution-list text-lg text-gray-800 space-y-2">
+                    <li>Enterprise integrations</li>
+                    <li>AI-enhanced visibility</li>
+                    <li>Tailored workflows that ERPs cannot model</li>
+                    <li>A future-ready, scalable tech foundation</li>
+                </ul>
+                <div class="p-4 bg-sunset-orange/10 rounded-lg shadow-md self-center mt-4 md:mt-0">
+                    <p class="text-xl font-bold text-gray-800">
+                        If you want an unfair advantage, this is where you
+                        get it.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="cta" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-sunset-orange">READY TO BUILD YOUR CUSTOM SYSTEM?</h2>
+            <p class="text-xl font-medium mb-8 text-white">
+                If your workflows are too complex for standard tools —
+                CustomX™ is built for you.
+            </p>
+            
+            <a href="#" class="inline-block px-10 py-4 bg-electric-blue text-white text-xl font-bold rounded-full shadow-xl hover:bg-electric-blue/90 transition duration-300 ease-in-out transform hover:scale-[1.05] mb-4">
+                ➡ Start with Blueprint™
+            </a>
+            <p class="text-lg font-medium text-gray-200 mt-2">
+                ➡ <a href="#" class="text-lime-green hover:underline">Book a Consultation</a>
+            </p>
+            <p class="text-lg font-medium text-gray-200">
+                ➡ <a href="mailto:info@blueblocks.ai" class="text-lime-green hover:underline">info@blueblocks.ai</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 BlueBlockss. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
