@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blueprint™ - BlueBlockss</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Define Custom Colors */
+        :root {
+            --electric-blue: #0077FF; /* Primary CTA, Headers, Key Accents */
+            --sunset-orange: #FF7F50; /* Secondary Accent, Highlights */
+            --lime-green: #32CD32; /* Success/Results/Checkmarks */
+            --vivid-purple: #8A2BE2; /* Deeper Accent, Section Background */
+        }
+        
+        /* Utility classes for new colors */
+        .text-electric-blue { color: var(--electric-blue); }
+        .bg-electric-blue { background-color: var(--electric-blue); }
+        .border-electric-blue { border-color: var(--electric-blue); }
+        .text-sunset-orange { color: var(--sunset-orange); }
+        .bg-sunset-orange { background-color: var(--sunset-orange); }
+        .text-lime-green { color: var(--lime-green); }
+        .bg-lime-green { background-color: var(--lime-green); }
+        .text-vivid-purple { color: var(--vivid-purple); }
+        .bg-vivid-purple { background-color: var(--vivid-purple); }
+        
+        /* Custom list style for checkmarks (Guaranteed Outcomes/Why Start) */
+        .check-list li {
+            position: relative;
+            padding-left: 2rem;
+            list-style: none; /* Remove default marker */
+            margin-bottom: 0.5rem;
+        }
+        .check-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 900;
+            color: var(--lime-green); 
+            font-size: 1.25rem;
+        }
+
+        /* Custom list style for standard bullet points (Used in 'What Blueprint Includes' sub-lists) */
+        .solution-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            list-style: none; /* Remove default marker */
+        }
+        .solution-list li::before {
+            content: '\2022'; /* Bullet point character */
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+            color: var(--electric-blue); 
+            font-size: 1.25rem;
+        }
+        
+        /* Hero Background Styling */
+        .hero-bg {
+            background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 100%);
+        }
+
+        /* Numbered list for 'What Blueprint Includes' */
+        .numbered-list {
+            counter-reset: item;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .numbered-list > li {
+            counter-increment: item;
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+        .numbered-list > li::before {
+            content: counter(item) ".";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--sunset-orange);
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body class="font-[Inter] text-gray-800 bg-white">
+
+    <!-- Header & Navigation (Consistent with previous page) -->
+    <header class="sticky top-0 z-50 bg-white/95 shadow-lg backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold text-electric-blue tracking-tight">BLUEBLOCKSS</h1>
+            <a href="#cta" class="px-6 py-2 bg-sunset-orange text-white font-semibold rounded-full shadow-lg hover:opacity-90 transition duration-300 ease-in-out">
+                Book Consultation
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-20 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Main Title Block -->
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl sm:text-6xl font-extrabold leading-tight mb-4">
+                    <span class="text-electric-blue">BLUEPRINT™</span>
+                </h2>
+                <p class="text-2xl sm:text-3xl font-semibold mb-8 text-gray-700">
+                    Your Operational Modernization & ERP-Alternative Roadmap
+                </p>
+            </div>
+            
+            <!-- Core Pitch Block -->
+            <div class="max-w-5xl mx-auto bg-white p-8 rounded-xl shadow-2xl border-t-8 border-sunset-orange text-left">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4">
+                    The First Step Toward a Modern, Automated Industrial Operating System
+                </h3>
+                <p class="text-lg text-gray-700 mb-6">
+                    Industrial SMBs struggle with scattered processes, outdated
+                    tools, and disconnected systems.
+                </p>
+                <p class="text-xl font-bold text-electric-blue mb-6">
+                    Blueprint™ gives you clarity, confidence, and a complete modernization plan before implementation begins.
+                </p>
+                <p class="text-lg text-gray-700">
+                    It is the recommended starting point for every BlueBlockss client.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Blueprint? -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-vivid-purple mb-6 border-b-2 pb-2 border-vivid-purple/50">
+                WHAT IS BLUEPRINT™?
+            </h2>
+            <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+                <div class="lg:col-span-2">
+                    <p class="text-xl text-gray-700 mb-6">
+                        Blueprint™ is a structured operational discovery +
+                        architecture engagement that maps your current workflows and designs your
+                        future-state operating system using:
+                    </p>
+                    <!-- Zoho Tools List -->
+                    <div class="grid md:grid-cols-2 gap-x-6 text-gray-700 text-lg">
+                        <ul class="solution-list">
+                            <li>Zoho CRM, Inventory, Books</li>
+                            <li>Custom apps in Zoho Creator</li>
+                            <li>Serverless automation in Zoho Catalyst</li>
+                            <li>Cross-department automation using Zoho Flow</li>
+                        </ul>
+                        <ul class="solution-list">
+                            <li>Real-time analytics in Zoho Analytics</li>
+                            <li>AI-assisted insights powered by Zoho Zia</li>
+                            <li>Integrations with SAP, Oracle, Sage, Acomba, Dynamics, NetSuite</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-1 mt-8 lg:mt-0 bg-electric-blue/10 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-electric-blue mb-3">The result:</h3>
+                    <p class="text-lg font-semibold text-gray-800">
+                        A complete ERP-alternative system design tailored to how your business actually works.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-electric-blue mb-6 border-b-2 pb-2 border-electric-blue/50">
+                WHO IT’S FOR
+            </h2>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">
+                        Blueprint™ is built for Canadian industrial SMBs:
+                    </h3>
+                    <div class="grid grid-cols-2 text-lg text-gray-800">
+                        <ul class="solution-list">
+                            <li>Manufacturers</li>
+                            <li>Distributors & wholesalers</li>
+                            <li>Logistics & fleet operators</li>
+                        </ul>
+                        <ul class="solution-list">
+                            <li>Warehousing & fulfillment</li>
+                            <li>Industrial supply companies</li>
+                        </ul>
+                    </div>
+                    <p class="text-xl font-bold text-sunset-orange mt-6">
+                        Ideal revenue: $5M–$50M
+                    </p>
+                    <p class="text-sm text-gray-500 mt-2">
+                        (With flexibility for fast-growing smaller or larger clients.)
+                    </p>
+                </div>
+                <div class="p-6 bg-sunset-orange/10 rounded-xl shadow-inner">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">
+                        Blueprint™ is essential if you currently rely on:
+                    </h3>
+                    <div class="grid grid-cols-2 text-lg text-gray-800">
+                        <ul class="solution-list">
+                            <li>spreadsheets</li>
+                            <li>paper forms</li>
+                            <li>Acomba, Sage, legacy systems</li>
+                        </ul>
+                        <ul class="solution-list">
+                            <li>manual processes</li>
+                            <li>disconnected workflows</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Blueprint Includes (Detailed List) -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-vivid-purple mb-6 border-b-2 pb-2 border-vivid-purple/50">
+                WHAT BLUEPRINT™ INCLUDES
+            </h2>
+            <p class="text-xl text-gray-700 mb-8">
+                A complete analysis of your entire operation:
+            </p>
+
+            <ul class="numbered-list grid lg:grid-cols-2 gap-x-12 gap-y-6">
+                
+                <!-- 1. Operational Workflow Mapping -->
+                <li>
+                    <p class="text-xl font-bold text-gray-900 mb-2">Operational Workflow Mapping</p>
+                    <p class="text-gray-700 mb-3">Full end-to-end mapping of your:</p>
+                    <div class="grid grid-cols-2 text-sm text-gray-600">
+                        <ul class="solution-list">
+                            <li>Sales</li>
+                            <li>Purchasing</li>
+                            <li>Inventory</li>
+                            <li>Production</li>
+                            <li>QC / Inspection</li>
+                        </ul>
+                        <ul class="solution-list">
+                            <li>Warehouse</li>
+                            <li>Dispatch / Fleet</li>
+                            <li>Finance</li>
+                            <li>Customer service</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- 2. Bottleneck & Inefficiency Analysis -->
+                <li>
+                    <p class="text-xl font-bold text-gray-900 mb-2">Bottleneck & Inefficiency Analysis</p>
+                    <p class="text-gray-700 mb-3">We identify:</p>
+                    <ul class="solution-list text-sm text-gray-600">
+                        <li>delays</li>
+                        <li>double-entry</li>
+                        <li>missed communication loops</li>
+                        <li>manual work</li>
+                        <li>failure points</li>
+                    </ul>
+                </li>
+
+                <!-- 3. ERP-Alternative Gap Assessment -->
+                <li>
+                    <p class="text-xl font-bold text-gray-900 mb-2">ERP-Alternative Gap Assessment</p>
+                    <p class="text-gray-700">
+                        We evaluate what’s missing in your current system vs. what you need.
+                    </p>
+                </li>
+
+                <!-- 4. Data Model & System Architecture -->
+                <li>
+                    <p class="text-xl font-bold text-gray-900 mb-2">Data Model & System Architecture</p>
+                    <p class="text-gray-700 mb-3">Your future-state industrial operating system — fully designed:</p>
+                    <div class="grid grid-cols-2 text-sm text-gray-600">
+                        <ul class="solution-list">
+                            <li>modules</li>
+                            <li>integrations</li>
+                            <li>security</li>
+                            <li>roles & permissions</li>
+                        </ul>
+                        <ul class="solution-list">
+                            <li>automation layers</li>
+                            <li>data structure</li>
+                            <li>dashboards</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- 5. Creator Application Requirements -->
+                <li>
+                    <p class="text-xl font-bold text-gray-900 mb-2">Creator Application Requirements</p>
+                    <p class="text-gray-700 mb-3">Define custom apps needed for:</p>
+                    <div class="grid grid-cols-2 text-sm text-gray-600">
+                        <ul class="solution-list">
+                            <li>production</li>
+                            <li>QC</li>
+                            <li>warehouse tasks</li>
+                        </ul>
+                        <ul class="solution-list">
+                            <li>dispatch</li>
+                            <li>portals</li>
+                            <li>inspections</li>
+                            <li>service workflows</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- 6. Catalyst Automation Requirements -->
+                <li>
+                    <p class="text-xl font-bold text-gray-900 mb-2">Catalyst Automation Requirements</p>
+                    <p class="text-gray-700 mb-3">Define all serverless logic for:</p>
+                    <ul class="solution-list text-sm text-gray-600">
+                        <li>integrations</li>
+                        <li>heavy calculations</li>
+                        <li>real-time processing</li>
+                        <li>microservices</li>
+                        <li>data transformations</li>
+                    </ul>
+                </li>
+
+                <!-- 7. Integration Plan -->
+                <li>
+                    <p class="text-xl font-bold text-gray-900 mb-2">Integration Plan</p>
+                    <p class="text-gray-700 mb-3">Map how Zoho connects with:</p>
+                    <div class="grid grid-cols-2 text-sm text-gray-600">
+                        <ul class="solution-list">
+                            <li>SAP</li>
+                            <li>Oracle</li>
+                            <li>Dynamics 365</li>
+                            <li>NetSuite</li>
+                        </ul>
+                        <ul class="solution-list">
+                            <li>Sage</li>
+                            <li>Acomba</li>
+                            <li>On-premise / custom internal systems</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- 8. Complete Implementation Roadmap -->
+                <li>
+                    <p class="text-xl font-bold text-gray-900 mb-2">Complete Implementation Roadmap</p>
+                    <p class="text-gray-700 mb-3">Including:</p>
+                    <ul class="solution-list text-sm text-gray-600">
+                        <li>phases</li>
+                        <li>timeline</li>
+                        <li>technical plan</li>
+                        <li>sequence</li>
+                        <li>team structure</li>
+                    </ul>
+                </li>
+
+                <!-- 9. Budget Range (Predictable & Transparent) -->
+                <li>
+                    <p class="text-xl font-bold text-gray-900 mb-2">Budget Range (Predictable & Transparent)</p>
+                    <p class="text-gray-700">
+                        You will know the cost before any build begins.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 6-Step Blueprint Framework -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-sunset-orange mb-8 border-b-2 pb-2 border-sunset-orange/50 text-center">
+                OUR 6-STEP BLUEPRINT™ FRAMEWORK
+            </h2>
+             [Image of 6-step business process framework]
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
+                <!-- Step 1 -->
+                <div class="p-6 bg-electric-blue text-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <p class="text-3xl font-extrabold mb-2">1 — Operational Discovery</p>
+                    <p class="text-lg opacity-90">We deep-dive into your business, processes, and systems.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="p-6 bg-vivid-purple text-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <p class="text-3xl font-extrabold mb-2">2 — Bottleneck & Inefficiency Analysis</p>
+                    <p class="text-lg opacity-90">We identify where manual work and delays exist.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="p-6 bg-sunset-orange text-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <p class="text-3xl font-extrabold mb-2">3 — System Architecture + Data Model</p>
+                    <p class="text-lg opacity-90">We design your future-state Industrial OS™.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="p-6 bg-lime-green text-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <p class="text-3xl font-extrabold mb-2">4 — Implementation & Automation Plan</p>
+                    <p class="text-lg opacity-90">Creator apps, Catalyst logic, workflows, dashboards.</p>
+                </div>
+                <!-- Step 5 -->
+                <div class="p-6 bg-gray-700 text-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <p class="text-3xl font-extrabold mb-2">5 — Validation & Internal Alignment</p>
+                    <p class="text-lg opacity-90">Your leadership team reviews and approves the plan.</p>
+                </div>
+                <!-- Step 6 -->
+                <div class="p-6 bg-electric-blue text-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+                    <p class="text-3xl font-extrabold mb-2">6 — Roadmap + Budget + Go-Live Strategy</p>
+                    <p class="text-lg opacity-90">Everything you need to proceed confidently.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guaranteed Outcomes -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-lime-green mb-6 border-b-2 pb-2 border-lime-green/50">
+                GUARANTEED OUTCOMES
+            </h2>
+            <div class="grid lg:grid-cols-2 gap-x-12 gap-y-4">
+                <ul class="check-list text-xl text-gray-800 space-y-2">
+                    <li>Full clarity on your current workflows</li>
+                    <li>A complete future-state operating system design</li>
+                    <li>Clear understanding of custom apps & automations needed</li>
+                    <li>A single source of truth for decision-making</li>
+                </ul>
+                <ul class="check-list text-xl text-gray-800 space-y-2">
+                    <li>Leadership alignment</li>
+                    <li>Predictable budget and timeline</li>
+                    <li>Zero risk before build begins</li>
+                </ul>
+            </div>
+            <p class="text-lg text-gray-700 mt-8">
+                Blueprint™ eliminates uncertainty — and sets your entire modernization up for success.
+            </p>
+        </div>
+    </section>
+
+    <!-- Why Every Client Starts -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-electric-blue mb-6 border-b-2 pb-2 border-electric-blue/50">
+                WHY EVERY CLIENT STARTS WITH BLUEPRINT™
+            </h2>
+            <div class="grid lg:grid-cols-2 gap-x-12 gap-y-4">
+                <ul class="check-list text-xl text-gray-800 space-y-2">
+                    <li>Avoids costly mistakes</li>
+                    <li>Ensures correct architecture</li>
+                    <li>Aligns your teams</li>
+                </ul>
+                <ul class="check-list text-xl text-gray-800 space-y-2">
+                    <li>Prevents rework</li>
+                    <li>Produces a predictable implementation</li>
+                    <li>Gives you an ERP-alternative plan you can trust</li>
+                </ul>
+            </div>
+            <p class="text-lg font-bold text-gray-700 mt-8">
+                Blueprint™ is not optional — it is the foundation of your entire transformation.
+            </p>
+        </div>
+    </section>
+
+    <!-- What Happens After -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-vivid-purple mb-6 border-b-2 pb-2 border-vivid-purple/50">
+                WHAT HAPPENS AFTER BLUEPRINT™?
+            </h2>
+            <p class="text-xl text-gray-700 mb-6">
+                You can choose the implementation path that fits your needs:
+            </p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-lg text-gray-800">
+                <p class="font-semibold p-4 bg-white rounded-lg shadow-md border-t-4 border-sunset-orange">
+                    Industrial Core System™ — Foundational ERP-alternative
+                </p>
+                <p class="font-semibold p-4 bg-white rounded-lg shadow-md border-t-4 border-vivid-purple">
+                    Industrial OS™ — Full modernization
+                </p>
+                <p class="font-semibold p-4 bg-white rounded-lg shadow-md border-t-4 border-electric-blue">
+                    CustomX™ — Advanced custom engineering
+                </p>
+                <p class="font-semibold p-4 bg-white rounded-lg shadow-md border-t-4 border-lime-green">
+                    Optimize+ — Ongoing support & improvements
+                </p>
+            </div>
+            <p class="text-lg text-gray-700 mt-8">
+                Blueprint™ ensures you choose the correct path with complete confidence.
+            </p>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="cta" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-sunset-orange">READY TO START YOUR MODERNIZATION JOURNEY?</h2>
+            <p class="text-xl font-medium mb-8 text-white">
+                Blueprint™ is the safest and most strategic first step toward building your modern industrial operating system.
+            </p>
+            
+            <a href="#" class="inline-block px-10 py-4 bg-electric-blue text-white text-xl font-bold rounded-full shadow-xl hover:bg-electric-blue/90 transition duration-300 ease-in-out transform hover:scale-[1.05] mb-4">
+                ➡ Book Your Blueprint™ Consultation
+            </a>
+            <p class="text-lg font-medium text-gray-200">
+                ➡ <a href="mailto:info@blueblocks.ai" class="text-sunset-orange hover:underline">info@blueblocks.ai</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer (Consistent with previous page) -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 BlueBlockss. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
