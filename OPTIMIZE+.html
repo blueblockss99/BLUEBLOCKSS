@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optimize+ - Continuous Improvement</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Define Custom Colors (Consistent with previous pages) */
+        :root {
+            --electric-blue: #0077FF; /* System & Platform */
+            --sunset-orange: #FF7F50; /* Primary Accent (Growth/Evolution) */
+            --lime-green: #32CD32; /* Success/Results/Checkmarks (Reliability) */
+            --vivid-purple: #8A2BE2; /* Secondary Accent */
+        }
+        
+        /* Utility classes for new colors */
+        .text-electric-blue { color: var(--electric-blue); }
+        .bg-electric-blue { background-color: var(--electric-blue); }
+        .border-electric-blue { border-color: var(--electric-blue); }
+        .text-sunset-orange { color: var(--sunset-orange); }
+        .bg-sunset-orange { background-color: var(--sunset-orange); }
+        .text-lime-green { color: var(--lime-green); }
+        .bg-lime-green { background-color: var(--lime-green); }
+        .text-vivid-purple { color: var(--vivid-purple); }
+        .bg-vivid-purple { background-color: var(--vivid-purple); }
+        
+        /* Custom list style for checkmarks (What Is / Outcomes / How It Fits) */
+        .check-list li {
+            position: relative;
+            padding-left: 2rem;
+            list-style: none; /* Remove default marker */
+            margin-bottom: 0.5rem;
+        }
+        .check-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 900;
+            color: var(--lime-green); 
+            font-size: 1.25rem;
+        }
+
+        /* Custom list style for standard bullet points (Used in Who It's For, What's Included sub-lists, and When to Choose) */
+        .solution-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            list-style: none; /* Remove default marker */
+        }
+        .solution-list li::before {
+            content: '\2022'; /* Bullet point character */
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+            color: var(--electric-blue); 
+            font-size: 1.25rem;
+        }
+        
+        /* Hero Background Styling - Light green/blue for growth and stability */
+        .hero-bg {
+            background: linear-gradient(135deg, #e0ffe0 0%, #ffffff 100%); 
+        }
+
+        /* Numbered list for 'What's Included' */
+        .numbered-list {
+            counter-reset: item;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .numbered-list > li {
+            counter-increment: item;
+            margin-bottom: 2.5rem;
+            padding-left: 0; 
+            position: relative;
+            border-bottom: 1px dashed #cccccc; /* Subtle separation for continuous service */
+            padding-bottom: 1.5rem;
+        }
+        .numbered-list > li:last-child {
+            border-bottom: none;
+        }
+        .numbered-list > li > div {
+            padding-left: 2rem; /* Indent the content */
+        }
+        .numbered-list > li::before {
+            content: counter(item) ".";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.75rem; /* Larger number */
+            font-weight: bold;
+            color: var(--sunset-orange); /* Emphasize ongoing process */
+        }
+    </style>
+</head>
+<body class="font-[Inter] text-gray-800 bg-white">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 shadow-lg backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold text-electric-blue tracking-tight">BLUEBLOCKSS</h1>
+            <a href="#cta" class="px-6 py-2 bg-sunset-orange text-white font-semibold rounded-full shadow-lg hover:opacity-90 transition duration-300 ease-in-out">
+                Book Your Consultation
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-20 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Main Title Block -->
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl sm:text-6xl font-extrabold leading-tight mb-4 text-lime-green">
+                    OPTIMIZE+
+                </h2>
+                <p class="text-2xl sm:text-3xl font-semibold mb-6 text-gray-700">
+                    Continuous Improvement, Automation Enhancements & Long-Term Support
+                </p>
+                <h3 class="text-xl sm:text-2xl font-medium text-gray-600 mb-12">
+                    Keep Your Industrial Operating System Stable, Scalable & Always Improving
+                </h3>
+            </div>
+            
+            <!-- Core Pitch Block -->
+            <div class="max-w-5xl mx-auto bg-white p-8 rounded-xl shadow-2xl border-t-8 border-sunset-orange text-left">
+                <p class="text-lg text-gray-700 mb-6">
+                    After your Industrial Core System™, Industrial OS™, or
+                    CustomX™ is live, your business will continue to evolve:
+                </p>
+                
+                <!-- Evolution List -->
+                <div class="grid md:grid-cols-2 gap-x-6 text-gray-800 text-lg font-medium">
+                    <ul class="solution-list text-base">
+                        <li>New roles get added</li>
+                        <li>New warehouses open</li>
+                        <li>New customers come in</li>
+                        <li>New automation opportunities appear</li>
+                    </ul>
+                    <ul class="solution-list text-base">
+                        <li>New workflows need refinement</li>
+                        <li>New reports and dashboards are needed</li>
+                        <li>Teams discover new efficiency gains</li>
+                    </ul>
+                </div>
+                
+                <p class="text-xl font-bold text-electric-blue mt-6">
+                    That’s why every modern industrial company needs Optimize+
+                    — your ongoing support & continuous improvement program.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Optimize+? -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-vivid-purple mb-6 border-b-2 pb-2 border-vivid-purple/50">
+                WHAT IS OPTIMIZE+?
+            </h2>
+            
+            <div class="grid lg:grid-cols-2 lg:gap-12">
+                <div class="p-6 bg-vivid-purple/10 rounded-xl shadow-inner">
+                    <p class="text-xl font-semibold text-gray-800 mb-4">
+                        Optimize+ is BlueBlockss' monthly retainer service
+                        that ensures:
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-x-6 text-gray-700 text-lg">
+                        <ul class="check-list">
+                            <li>Your system stays stable</li>
+                            <li>Automations run reliably</li>
+                            <li>Creator apps evolve as your operations change</li>
+                            <li>Catalyst logic is updated securely</li>
+                        </ul>
+                        <ul class="check-list">
+                            <li>Dashboards continue to reflect real KPIs</li>
+                            <li>Issues are resolved quickly</li>
+                            <li>New improvements are continuously implemented</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-lg mt-8 lg:mt-0 border-t-4 border-lime-green self-center">
+                    <p class="text-xl font-bold text-gray-800">
+                        It’s the industrial equivalent of having a dedicated
+                        automation team on standby — without the cost of hiring one.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-sunset-orange mb-8 border-b-2 pb-2 border-sunset-orange/50">
+                WHO IT’S FOR
+            </h2>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">
+                        Optimize+ is ideal for:
+                    </h3>
+                    <ul class="solution-list text-lg text-gray-800 space-y-2">
+                        <li>Companies running Industrial Core System™</li>
+                        <li>Companies running Industrial OS™</li>
+                        <li>Companies using CustomX™ apps</li>
+                        <li>Industrial businesses with ongoing automation needs</li>
+                        <li>SMBs that require responsive operational support</li>
+                        <li>Teams that want to continuously optimize and scale</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-electric-blue/10 rounded-xl shadow-md self-center">
+                    <p class="text-xl font-bold text-gray-800">
+                        If your workflows change frequently, or if you depend on
+                        automation for operations, Optimize+ is essential.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included in Optimize+ (Detailed List) -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-electric-blue mb-6 border-b-2 pb-2 border-electric-blue/50">
+                WHAT’S INCLUDED
+            </h2>
+            <p class="text-xl text-gray-700 mb-8">
+                Optimize+ provides support across all layers of your
+                system.
+            </p>
+
+            <ul class="numbered-list grid lg:grid-cols-2 gap-x-12 gap-y-6">
+                
+                <!-- 1. Automation & Workflow Enhancements -->
+                <li>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-2">Automation & Workflow Enhancements</p>
+                        <p class="text-gray-700 mb-3 font-semibold text-sm">We evolve your system as processes change:</p>
+                        <ul class="solution-list text-sm text-gray-600">
+                            <li>Update automations (Flow, Creator, Catalyst)</li>
+                            <li>Add new rules, logic, and workflows</li>
+                            <li>Optimize slow or outdated processes</li>
+                            <li>Build new operational efficiency improvements</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- 2. Creator App Enhancements -->
+                <li>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-2">Creator App Enhancements</p>
+                        <p class="text-gray-700 mb-3 font-semibold text-sm">Updates to your custom industrial apps:</p>
+                        <ul class="solution-list text-sm text-gray-600">
+                            <li>Add new modules</li>
+                            <li>Modify forms</li>
+                            <li>Improve UI/UX</li>
+                            <li>Add new fields, logic, or reports</li>
+                            <li>Expand the workflow</li>
+                        </ul>
+                        <p class="text-xs text-sunset-orange italic mt-2">Your custom apps grow with your business.</p>
+                    </div>
+                </li>
+
+                <!-- 3. Catalyst Logic Maintenance -->
+                <li>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-2">Catalyst Logic Maintenance</p>
+                        <p class="text-gray-700 mb-3 font-semibold text-sm">For advanced clients with heavy automation:</p>
+                        <div class="grid grid-cols-2 text-sm text-gray-600">
+                            <ul class="solution-list">
+                                <li>Code updates</li>
+                                <li>Serverless function tuning</li>
+                                <li>Security patching</li>
+                            </ul>
+                            <ul class="solution-list">
+                                <li>API key rotation</li>
+                                <li>Monitoring & performance optimization</li>
+                                <li>Logging & event tracking</li>
+                            </ul>
+                        </div>
+                        <p class="text-xs text-sunset-orange italic mt-2">Catalyst is your automation engine — we keep it stable.</p>
+                    </div>
+                </li>
+
+                <!-- 4. Dashboards & Reporting Upgrades -->
+                <li>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-2">Dashboards & Reporting Upgrades</p>
+                        <p class="text-gray-700 mb-3 font-semibold text-sm">Using Zoho Analytics:</p>
+                        <div class="grid grid-cols-2 text-sm text-gray-600">
+                            <ul class="solution-list">
+                                <li>New KPIs</li>
+                                <li>New dashboards for teams</li>
+                                <li>Enhancements in visualizations</li>
+                            </ul>
+                            <ul class="solution-list">
+                                <li>Predictive or AI-assisted insights</li>
+                                <li>Consolidated management dashboards</li>
+                            </ul>
+                        </div>
+                        <p class="text-xs text-sunset-orange italic mt-2">Real-time visibility improves continuously.</p>
+                    </div>
+                </li>
+
+                <!-- 5. Data Governance, Security & Compliance -->
+                <li>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-2">Data Governance, Security & Compliance</p>
+                        <p class="text-gray-700 mb-3 font-semibold text-sm">We ensure industrial-grade protection:</p>
+                        <div class="grid grid-cols-2 text-sm text-gray-600">
+                            <ul class="solution-list">
+                                <li>Permission updates</li>
+                                <li>User onboarding/offboarding</li>
+                                <li>Access control audits</li>
+                            </ul>
+                            <ul class="solution-list">
+                                <li>Role updates</li>
+                                <li>PIPEDA-aligned practices</li>
+                                <li>Audit logs and security checks</li>
+                            </ul>
+                        </div>
+                        <p class="text-xs text-sunset-orange italic mt-2">Critical for regulated industries and growing teams.</p>
+                    </div>
+                </li>
+
+                <!-- 6. Integrations & API Maintenance -->
+                <li>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-2">Integrations & API Maintenance</p>
+                        <p class="text-gray-700 mb-3 font-semibold text-sm">For clients integrated with SAP, Oracle, Sage, Acomba, Dynamics, NetSuite:</p>
+                        <div class="grid grid-cols-2 text-sm text-gray-600">
+                            <ul class="solution-list">
+                                <li>API updates</li>
+                                <li>ETL adjustments</li>
+                                <li>Transformation logic updates</li>
+                            </ul>
+                            <ul class="solution-list">
+                                <li>Data sync monitoring</li>
+                                <li>Error resolution</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- 7. Issue Resolution & General Support -->
+                <li>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-2">Issue Resolution & General Support</p>
+                        <p class="text-gray-700 mb-3 font-semibold text-sm">When your team faces an issue:</p>
+                        <ul class="solution-list text-sm text-gray-600">
+                            <li>We investigate</li>
+                            <li>Fix</li>
+                            <li>Document</li>
+                            <li>Deploy safely</li>
+                        </ul>
+                        <p class="text-xs text-sunset-orange italic mt-2">Your system stays stable and reliable.</p>
+                    </div>
+                </li>
+                
+                <!-- 8. Training & Onboarding New Staff -->
+                <li>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-2">Training & Onboarding New Staff</p>
+                        <p class="text-gray-700 mb-3 font-semibold text-sm">When your team grows:</p>
+                        <ul class="solution-list text-sm text-gray-600">
+                            <li>New employee training</li>
+                            <li>Role-based guidance</li>
+                            <li>System walkthroughs</li>
+                            <li>Quick reference documentation</li>
+                        </ul>
+                        <p class="text-xs text-sunset-orange italic mt-2">Keeps everyone aligned.</p>
+                    </div>
+                </li>
+
+                <!-- 9. Quarterly Optimization Reviews -->
+                <li class="lg:col-span-2">
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-2">Quarterly Optimization Reviews</p>
+                        <p class="text-gray-700 mb-3 font-semibold text-sm">Strategic, high-level review every quarter:</p>
+                        <div class="grid md:grid-cols-2 text-sm text-gray-600">
+                            <ul class="solution-list">
+                                <li>Identify workflow improvements</li>
+                                <li>Propose automation opportunities</li>
+                                <li>Prioritize enhancements</li>
+                            </ul>
+                            <ul class="solution-list">
+                                <li>Evaluate system performance</li>
+                                <li>Provide leadership insights</li>
+                            </ul>
+                        </div>
+                        <p class="text-xs text-sunset-orange italic mt-2">This prevents your system from becoming outdated.</p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <!-- Outcomes You Can Expect -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-lime-green mb-6 border-b-2 pb-2 border-lime-green/50">
+                OUTCOMES YOU CAN EXPECT
+            </h2>
+            <div class="grid lg:grid-cols-2 gap-x-12 gap-y-4">
+                <ul class="check-list text-xl text-gray-800 space-y-2">
+                    <li>A stable, reliable operational system</li>
+                    <li>Continuous improvement and automation growth</li>
+                    <li>Faster workflows over time</li>
+                    <li>Evolving Creator apps that match your operation</li>
+                </ul>
+                <ul class="check-list text-xl text-gray-800 space-y-2">
+                    <li>Updated Catalyst logic for performance & security</li>
+                    <li>Dashboards that always reflect your real KPIs</li>
+                    <li>Fewer errors, lower risk, improved uptime</li>
+                    <li>Leadership confidence through quarterly reviews</li>
+                </ul>
+            </div>
+            <p class="text-lg text-gray-700 font-bold mt-8">
+                Optimize+ ensures your modernization journey never stops.
+            </p>
+        </div>
+    </section>
+
+    <!-- When to Choose / How it Fits -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12">
+            
+            <!-- When to Choose -->
+            <div>
+                <h2 class="text-3xl font-bold text-vivid-purple mb-6 border-b-2 pb-2 border-vivid-purple/50">
+                    WHEN TO CHOOSE OPTIMIZE+
+                </h2>
+                <ul class="solution-list text-xl text-gray-800 space-y-2">
+                    <li>You run a live industrial platform</li>
+                    <li>Your operations evolve quickly</li>
+                    <li>You rely on automation to keep work flowing</li>
+                    <li>You want your system to grow with your business</li>
+                    <li>You want expert support instead of internal staffing</li>
+                    <li>You want predictable improvement month after month</li>
+                </ul>
+            </div>
+
+            <!-- How it Fits -->
+            <div class="p-6 bg-sunset-orange/10 rounded-xl shadow-md">
+                <h2 class="text-3xl font-bold text-sunset-orange mb-6 border-b-2 pb-2 border-sunset-orange/50">
+                    HOW OPTIMIZE+ FITS INTO YOUR TRANSFORMATION
+                </h2>
+                <div class="text-2xl font-bold text-gray-800 space-y-4">
+                    <p>Blueprint™ →</p>
+                    <p>Industrial Core System™ / Industrial OS™ / CustomX™ →</p>
+                    <p class="text-electric-blue">Optimize+ (long-term evolution)</p>
+                </div>
+                <p class="text-lg text-gray-700 font-bold mt-8">
+                    This is the final stage of your modernization journey —
+                    keeping your system future-ready and continuously improving.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="cta" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-lime-green">READY FOR RELIABLE, LONG-TERM SUPPORT?</h2>
+            <p class="text-xl font-medium mb-8 text-white">
+                Optimize+ ensures your operation never stops improving.
+            </p>
+            
+            <a href="#" class="inline-block px-10 py-4 bg-electric-blue text-white text-xl font-bold rounded-full shadow-xl hover:bg-electric-blue/90 transition duration-300 ease-in-out transform hover:scale-[1.05] mb-4">
+                ➡ Book Your Consultation
+            </a>
+            <p class="text-lg font-medium text-gray-200 mt-2">
+                ➡ <a href="mailto:info@blueblocks.ai" class="text-sunset-orange hover:underline">info@blueblocks.ai</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 BlueBlockss. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
