@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial OS™ - BlueBlockss Flagship</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Define Custom Colors (Consistent with previous pages) */
+        :root {
+            --electric-blue: #0077FF; /* Primary Accent for this page, emphasizing "Flagship" */
+            --sunset-orange: #FF7F50; /* Secondary Accent */
+            --lime-green: #32CD32; /* Success/Results/Checkmarks */
+            --vivid-purple: #8A2BE2; /* Deeper Accent, Section Background */
+        }
+        
+        /* Utility classes for new colors */
+        .text-electric-blue { color: var(--electric-blue); }
+        .bg-electric-blue { background-color: var(--electric-blue); }
+        .border-electric-blue { border-color: var(--electric-blue); }
+        .text-sunset-orange { color: var(--sunset-orange); }
+        .bg-sunset-orange { background-color: var(--sunset-orange); }
+        .text-lime-green { color: var(--lime-green); }
+        .bg-lime-green { background-color: var(--lime-green); }
+        .text-vivid-purple { color: var(--vivid-purple); }
+        .bg-vivid-purple { background-color: var(--vivid-purple); }
+        
+        /* Custom list style for checkmarks (Outcomes, What Comes Next) */
+        .check-list li {
+            position: relative;
+            padding-left: 2rem;
+            list-style: none; /* Remove default marker */
+            margin-bottom: 0.5rem;
+        }
+        .check-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 900;
+            color: var(--lime-green); 
+            font-size: 1.25rem;
+        }
+
+        /* Custom list style for standard bullet points (Used in 'What Is' / 'Who It's For' / 'What's Included' sub-lists) */
+        .solution-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            list-style: none; /* Remove default marker */
+        }
+        .solution-list li::before {
+            content: '\2022'; /* Bullet point character */
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+            color: var(--electric-blue); 
+            font-size: 1.25rem;
+        }
+        
+        /* Hero Background Styling - A dynamic blue to signify the flagship product */
+        .hero-bg {
+            background: linear-gradient(135deg, #0077ff1a 0%, #ffffff 100%); /* Light electric blue gradient */
+        }
+
+        /* Numbered list for 'What's Included' */
+        .numbered-list {
+            counter-reset: item;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .numbered-list > li {
+            counter-increment: item;
+            margin-bottom: 2.5rem;
+            padding-left: 0; 
+            position: relative;
+            border-bottom: 2px solid #e5e7eb; /* Light separator */
+            padding-bottom: 1.5rem;
+        }
+        .numbered-list > li:last-child {
+            border-bottom: none;
+        }
+        .numbered-list > li > div {
+            padding-left: 2rem; /* Indent the content */
+        }
+        .numbered-list > li::before {
+            content: counter(item) ".";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.75rem; /* Larger number */
+            font-weight: bold;
+            color: var(--vivid-purple); /* Stand out */
+        }
+    </style>
+</head>
+<body class="font-[Inter] text-gray-800 bg-white">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 shadow-lg backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold text-electric-blue tracking-tight">BLUEBLOCKSS</h1>
+            <a href="#cta" class="px-6 py-2 bg-sunset-orange text-white font-semibold rounded-full shadow-lg hover:opacity-90 transition duration-300 ease-in-out">
+                Start with Blueprint™
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-20 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Main Title Block -->
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl sm:text-6xl font-extrabold leading-tight mb-4 text-electric-blue">
+                    INDUSTRIAL OS™
+                </h2>
+                <p class="text-2xl sm:text-3xl font-semibold mb-6 text-gray-700">
+                    Your Full, Modern ERP-Alternative for Manufacturing, Distribution & Logistics
+                </p>
+                <h3 class="text-xl sm:text-2xl font-medium text-gray-600 mb-12">
+                    Zoho + Custom Engineering + AI-Assisted Automation = A Unified Industrial Operating System
+                </h3>
+            </div>
+            
+            <!-- Core Pitch Block -->
+            <div class="max-w-5xl mx-auto bg-white p-8 rounded-xl shadow-2xl border-t-8 border-sunset-orange text-left">
+                <p class="text-lg text-gray-700 mb-6">
+                    Industrial OS™ is BlueBlockss’ flagship modernization
+                    platform — an end-to-end, ERP-alternative system designed specifically for
+                    Canadian manufacturers, distributors, logistics firms, and warehouse
+                    operations.
+                </p>
+                <p class="text-lg text-gray-700 mb-6">
+                    Unlike traditional ERPs that cost $200k+ and take 12–18
+                    months, Industrial OS™ delivers full operational automation using:
+                </p>
+                
+                <!-- Zoho Technologies List -->
+                <div class="grid md:grid-cols-2 gap-x-6 text-gray-800 text-lg font-medium">
+                    <ul class="solution-list">
+                        <li>Zoho CRM</li>
+                        <li>Zoho Inventory</li>
+                        <li>Zoho Books</li>
+                        <li>Custom apps in Zoho Creator</li>
+                        <li>Catalyst serverless automation</li>
+                    </ul>
+                    <ul class="solution-list">
+                        <li>Zoho Flow orchestration</li>
+                        <li>Zoho Analytics dashboards</li>
+                        <li>AI-assisted insights via Zoho Zia</li>
+                        <li>Enterprise integrations (SAP, Oracle, Dynamics 365, NetSuite, Sage, Acomba)</li>
+                    </ul>
+                </div>
+                
+                <p class="text-xl font-bold text-electric-blue mt-6">
+                    This becomes your central operating system — built exactly to match your workflows, teams, and industrial processes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Industrial OS? -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-vivid-purple mb-6 border-b-2 pb-2 border-vivid-purple/50">
+                WHAT IS INDUSTRIAL OS™?
+            </h2>
+            
+            <div class="grid lg:grid-cols-2 lg:gap-12">
+                <div class="p-6 bg-vivid-purple/10 rounded-xl shadow-inner">
+                    <p class="text-xl font-semibold text-gray-800 mb-4">
+                        Industrial OS™ is a complete, integrated, modern operational platform that replaces:
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-x-6 text-gray-700 text-lg">
+                        <ul class="solution-list">
+                            <li>Spreadsheets</li>
+                            <li>Paper processes</li>
+                            <li>Email-driven workflows</li>
+                            <li>Acomba & Sage limitations</li>
+                        </ul>
+                        <ul class="solution-list">
+                            <li>Legacy systems</li>
+                            <li>Disconnected tools</li>
+                            <li>Tribal knowledge workflows</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-lg mt-8 lg:mt-0 border-t-4 border-lime-green">
+                    <p class="text-xl font-semibold text-gray-800 mb-4">
+                        It gives your company:
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-x-6 text-gray-700 text-lg">
+                        <ul class="solution-list">
+                            <li>Real-time visibility</li>
+                            <li>Automation across all departments</li>
+                            <li>Consistency and accuracy</li>
+                        </ul>
+                        <ul class="solution-list">
+                            <li>AI-assisted insights</li>
+                            <li>Faster order-to-fulfillment</li>
+                            <li>Scalable systems for the next decade</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-sunset-orange mb-8 border-b-2 pb-2 border-sunset-orange/50">
+                WHO IT’S FOR
+            </h2>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">
+                        Designed for industrial SMBs that need full modernization, not just basic improvements:
+                    </h3>
+                    <div class="grid sm:grid-cols-2 text-lg text-gray-800">
+                        <ul class="solution-list">
+                            <li>Manufacturers</li>
+                            <li>Distributors & wholesalers</li>
+                            <li>Logistics & fleet operations</li>
+                        </ul>
+                        <ul class="solution-list">
+                            <li>Warehousing & fulfillment centers</li>
+                            <li>Industrial supply companies</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-6 bg-sunset-orange/10 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">
+                        This is the correct choice if you:
+                    </h3>
+                    <ul class="solution-list text-lg text-gray-800 space-y-2">
+                        <li>Have unique operational workflows</li>
+                        <li>Need automation across multiple departments</li>
+                        <li>Want Creator apps for production/warehouse/dispatch</li>
+                        <li>Need integrations with ERP or legacy systems</li>
+                        <li>Want a future-ready, scalable platform</li>
+                        <li>Are upgrading from disjointed systems</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-xl font-bold text-electric-blue mt-8">
+                Revenue fit: $5M–$50M, with flexibility for rapidly growing companies.
+            </p>
+        </div>
+    </section>
+
+    <!-- What's Included in Industrial OS (Detailed List) -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-electric-blue mb-6 border-b-2 pb-2 border-electric-blue/50">
+                WHAT’S INCLUDED IN INDUSTRIAL OS™
+            </h2>
+            <p class="text-xl text-gray-700 mb-8">
+                The system is built in layers — each one critical to industrial operations.
+            </p>
+
+            <ul class="numbered-list grid lg:grid-cols-2 gap-x-12 gap-y-6">
+                
+                <!-- 1. CRM + Inventory + Books Automation -->
+                <li>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-2">CRM + Inventory + Books Automation</p>
+                        <p class="text-gray-700 mb-3 font-semibold">Your core operational suite, fully configured:</p>
+                        <div class="grid grid-cols-2 text-sm text-gray-600">
+                            <ul class="solution-list">
+                                <li>Sales → Quotes → Orders</li>
+                                <li>Purchase → Receive → Fulfillment</li>
+                                <li>Multi-location warehouse management</li>
+                                <li>Order allocation & fulfillment workflows</li>
+                            </ul>
+                            <ul class="solution-list">
+                                <li>AP/AR automation</li>
+                                <li>Billing, invoicing, approvals</li>
+                                <li>Automated notifications across teams</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- 2. Custom Industrial Apps (Zoho Creator) -->
+                <li>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-2">Custom Industrial Apps (Zoho Creator)</p>
+                        <p class="text-gray-700 mb-3 font-semibold">Apps built exactly for your operation:</p>
+                        <div class="grid sm:grid-cols-2 gap-x-6 text-sm text-gray-600">
+                            <div>
+                                <h4 class="font-bold mt-2">Production & Assembly</h4>
+                                <ul class="solution-list">
+                                    <li>Work orders</li>
+                                    <li>Job tracking</li>
+                                    <li>BOM logic</li>
+                                    <li>WIP visibility</li>
+                                </ul>
+                                <h4 class="font-bold mt-2">Warehouse Operations</h4>
+                                <ul class="solution-list">
+                                    <li>Pick/pack/ship automation</li>
+                                    <li>Barcode scanning workflows</li>
+                                    <li>Warehouse task automation</li>
+                                    <li>Location/bin management</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mt-2">QC & Inspection</h4>
+                                <ul class="solution-list">
+                                    <li>Inspection records</li>
+                                    <li>Pass/fail logic</li>
+                                    <li>Traceability workflows</li>
+                                </ul>
+                                <h4 class="font-bold mt-2">Dispatch / Field Service</h4>
+                                <ul class="solution-list">
+                                    <li>Driver mobile apps</li>
+                                    <li>Route planning</li>
+                                    <li>Delivery confirmations</li>
+                                </ul>
+                                <h4 class="font-bold mt-2">Customer & Vendor Portals</h4>
+                                <ul class="solution-list">
+                                    <li>Self-service ordering</li>
+                                    <li>Ticketing</li>
+                                    <li>Status tracking</li>
+                                </ul>
+                                <h4 class="font-bold mt-2">Custom Apps</h4>
+                                <ul class="solution-list">
+                                    <li>Anything unique to your workflow.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="text-xs text-sunset-orange italic mt-2">Creator removes the limitations traditional ERPs impose.</p>
+                    </div>
+                </li>
+
+                <!-- 3. Serverless Automation (Zoho Catalyst) -->
+                <li>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-2">Serverless Automation (Zoho Catalyst)</p>
+                        <p class="text-gray-700 mb-3 font-semibold">Catalyst powers the advanced logic behind your system:</p>
+                        <div class="grid grid-cols-2 text-sm text-gray-600">
+                            <ul class="solution-list">
+                                <li>Complex business rules</li>
+                                <li>API integrations</li>
+                                <li>Real-time data transformations</li>
+                                <li>Microservices</li>
+                            </ul>
+                            <ul class="solution-list">
+                                <li>Serverless compute</li>
+                                <li>Automated document processing</li>
+                                <li>High-volume transactions</li>
+                            </ul>
+                        </div>
+                        <p class="text-xs text-sunset-orange italic mt-2">This is where BlueBlockss stands apart from standard Zoho consultants.</p>
+                    </div>
+                </li>
+
+                <!-- 4. Cross-Department Automation (Zoho Flow) -->
+                <li>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-2">Cross-Department Automation (Zoho Flow)</p>
+                        <p class="text-gray-700 mb-3 font-semibold">Seamless automation between all teams:</p>
+                        <ul class="solution-list text-sm text-gray-600">
+                            <li>CRM → Inventory</li>
+                            <li>Inventory → Books</li>
+                            <li>Production → QC</li>
+                            <li>Warehouse → Dispatch</li>
+                            <li>Finance → Operations</li>
+                        </ul>
+                        <p class="text-xs text-sunset-orange italic mt-2">Flow creates a fully orchestrated operation.</p>
+                    </div>
+                </li>
+
+                <!-- 5. AI-Assisted Insights (Zoho Zia + Analytics) -->
+                <li>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-2">AI-Assisted Insights (Zoho Zia + Analytics)</p>
+                        <p class="text-gray-700 mb-3 font-semibold">AI-supported intelligence across your system:</p>
+                        <div class="grid grid-cols-2 text-sm text-gray-600">
+                            <ul class="solution-list">
+                                <li>Anomaly detection</li>
+                                <li>Forecasting</li>
+                                <li>Smart suggestions</li>
+                            </ul>
+                            <ul class="solution-list">
+                                <li>Predictive insights</li>
+                                <li>Real-time dashboards</li>
+                            </ul>
+                        </div>
+                        <p class="text-xs text-sunset-orange italic mt-2">This brings AI-driven decision support into daily workflows.</p>
+                    </div>
+                </li>
+
+                <!-- 6. Integrations with Enterprise & Legacy Systems -->
+                <li>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-2">Integrations with Enterprise & Legacy Systems</p>
+                        <p class="text-gray-700 mb-3 font-semibold">We connect Zoho to:</p>
+                        <div class="grid grid-cols-2 text-sm text-gray-600">
+                            <ul class="solution-list">
+                                <li>SAP</li>
+                                <li>Oracle</li>
+                                <li>Dynamics 365</li>
+                                <li>NetSuite</li>
+                            </ul>
+                            <ul class="solution-list">
+                                <li>IBM</li>
+                                <li>Sage</li>
+                                <li>Acomba</li>
+                                <li>Custom on-premise tools</li>
+                            </ul>
+                        </div>
+                        <p class="text-xs text-sunset-orange italic mt-2">Your operation becomes a unified ecosystem.</p>
+                    </div>
+                </li>
+
+                <!-- 7. Security, Governance & Access Controls -->
+                <li>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-2">Security, Governance & Access Controls</p>
+                        <ul class="solution-list text-sm text-gray-600">
+                            <li>Role-based access</li>
+                            <li>Department-level permissions</li>
+                            <li>Data governance</li>
+                            <li>Privacy controls</li>
+                            <li>Audit trails</li>
+                            <li>Encryption standards</li>
+                        </ul>
+                        <p class="text-xs text-sunset-orange italic mt-2">Built to support PIPEDA and SOC2-aligned practices.</p>
+                    </div>
+                </li>
+
+                <!-- 8. Dashboards, KPIs & Real-Time Visibility -->
+                <li>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-2">Dashboards, KPIs & Real-Time Visibility</p>
+                        <p class="text-gray-700 mb-3 font-semibold">Analytics for:</p>
+                        <div class="grid grid-cols-2 text-sm text-gray-600">
+                            <ul class="solution-list">
+                                <li>Sales</li>
+                                <li>Inventory</li>
+                                <li>Production</li>
+                                <li>QC</li>
+                            </ul>
+                            <ul class="solution-list">
+                                <li>Fulfillment</li>
+                                <li>Finance</li>
+                                <li>Driver/dispatch</li>
+                                <li>Operations</li>
+                            </ul>
+                        </div>
+                        <p class="text-xs text-sunset-orange italic mt-2">Your leadership gets complete visibility across the business.</p>
+                    </div>
+                </li>
+
+                <!-- 9. UAT, Training, and Hypercare Support -->
+                <li>
+                    <div>
+                        <p class="text-xl font-bold text-gray-900 mb-2">UAT, Training, and Hypercare Support</p>
+                        <ul class="solution-list text-sm text-gray-600">
+                            <li>Multi-environment testing</li>
+                            <li>End-user training</li>
+                            <li>QA frameworks</li>
+                            <li>Go-live stabilization</li>
+                        </ul>
+                        <p class="text-xs text-sunset-orange italic mt-2">We ensure your team is ready.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Outcomes You Can Expect -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-lime-green mb-6 border-b-2 pb-2 border-lime-green/50">
+                OUTCOMES YOU CAN EXPECT
+            </h2>
+            <div class="grid lg:grid-cols-2 gap-x-12 gap-y-4">
+                <ul class="check-list text-xl text-gray-800 space-y-2">
+                    <li>30–60% reduction in manual work</li>
+                    <li>25–40% improvement in fulfillment accuracy</li>
+                    <li>Real-time visibility across operations</li>
+                    <li>Faster order-to-fulfillment cycles</li>
+                </ul>
+                <ul class="check-list text-xl text-gray-800 space-y-2">
+                    <li>Connected workflows across all teams</li>
+                    <li>Reduced operational waste</li>
+                    <li>Lower labor costs</li>
+                    <li>A scalable system for the next 10+ years</li>
+                </ul>
+            </div>
+            <p class="text-lg text-gray-700 mt-8">
+                Industrial OS™ turns your factory, warehouse, logistics, and distribution workflows into a modern, connected digital operation.
+            </p>
+        </div>
+    </section>
+
+    <!-- When to Choose / What Comes Next -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12">
+            
+            <!-- When to Choose -->
+            <div>
+                <h2 class="text-3xl font-bold text-vivid-purple mb-6 border-b-2 pb-2 border-vivid-purple/50">
+                    WHEN TO CHOOSE INDUSTRIAL OS™
+                </h2>
+                <ul class="solution-list text-xl text-gray-800 space-y-2">
+                    <li>You have complex industrial workflows</li>
+                    <li>You need custom apps that ERPs cannot support</li>
+                    <li>You need automation across multiple departments</li>
+                    <li>You rely on tribal knowledge today</li>
+                    <li>You have bottlenecks between sales, warehouse, production, and finance</li>
+                    <li>You want a custom-built ERP alternative</li>
+                    <li>You plan to scale for the next decade</li>
+                </ul>
+                <p class="text-lg text-gray-700 font-bold mt-8">
+                    This is not a simple software setup.
+                </p>
+                <p class="text-xl text-electric-blue font-bold mt-2">
+                    This is your next-generation operating platform.
+                </p>
+            </div>
+
+            <!-- What Comes Next? -->
+            <div>
+                <h2 class="text-3xl font-bold text-sunset-orange mb-6 border-b-2 pb-2 border-sunset-orange/50">
+                    WHAT COMES NEXT?
+                </h2>
+                <p class="text-xl text-gray-700 mb-6">
+                    After Industrial OS™ goes live, clients typically continue with:
+                </p>
+                <ul class="check-list text-xl text-gray-800 space-y-3">
+                    <li>Optimize+ — continuous improvement</li>
+                    <li>CustomX™ — advanced engineering and expansion</li>
+                    <li>AI-integrated workflows as their teams mature</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="cta" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-lime-green">READY TO MODERNIZE YOUR ENTIRE OPERATION?</h2>
+            <p class="text-xl font-medium mb-8 text-white">
+                Let’s build a modern, scalable, AI-assisted operating system
+                designed specifically for your industrial workflows.
+            </p>
+            
+            <a href="#" class="inline-block px-10 py-4 bg-electric-blue text-white text-xl font-bold rounded-full shadow-xl hover:bg-electric-blue/90 transition duration-300 ease-in-out transform hover:scale-[1.05] mb-4">
+                ➡ Start with Blueprint™
+            </a>
+            <p class="text-lg font-medium text-gray-200 mt-2">
+                ➡ <a href="#" class="text-sunset-orange hover:underline">Book a Consultation</a>
+            </p>
+            <p class="text-lg font-medium text-gray-200">
+                ➡ <a href="mailto:info@blueblocks.ai" class="text-sunset-orange hover:underline">info@blueblocks.ai</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 BlueBlockss. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
