@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUEBLOCKSS LTD - Zoho-Powered Automation for Industrial Operations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --electric-blue: #00BFFF;
+            --sunset-orange: #FF7F50;
+            --lime-green: #32CD32;
+            --vivid-purple: #9400D3;
+            --bright-yellow: #FFFF00;
+            --dark-text: #1a20c;
+            --light-bg-body: #f0f8ff; /* Light bluish background for overall page */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light-bg-body);
+            line-height: 1.6;
+            color: var(--dark-text);
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark-text);
+        }
+        .section-container {
+            background-color: white;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 1.5rem; /* More rounded */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Custom styling for the unique list markers */
+        .styled-bullet {
+            font-weight: 700;
+            color: var(--electric-blue);
+            margin-right: 0.75rem;
+            font-size: 1.1em;
+        }
+        .styled-check {
+            color: var(--lime-green);
+            font-weight: 900;
+            margin-right: 0.75rem;
+            display: inline-block;
+            width: 1.5rem;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .section-header {
+            border-bottom: 4px solid var(--electric-blue);
+            padding-bottom: 1rem;
+            margin-bottom: 2.5rem;
+            font-size: 2.5rem; /* Larger */
+            font-weight: 900;
+            color: var(--vivid-purple);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            animation: bounceIn 1s ease-out;
+        }
+        @keyframes bounceIn {
+            0% { transform: scale(0.5); opacity: 0; }
+            70% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+
+        .cta-button {
+            background-image: linear-gradient(to right, var(--electric-blue) 0%, var(--vivid-purple) 100%);
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(0, 191, 255, 0.3);
+            font-weight: 700;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            z-index: -1;
+        }
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(0, 191, 255, 0.4);
+        }
+
+        /* Gradient backgrounds for key sections */
+        .header-gradient {
+            background: linear-gradient(135deg, var(--electric-blue) 0%, var(--vivid-purple) 100%);
+            color: white;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+        }
+        .intro-gradient {
+            background: linear-gradient(45deg, var(--sunset-orange) 0%, var(--bright-yellow) 100%);
+            color: var(--dark-text);
+            box-shadow: 0 15px 40px rgba(255, 127, 80, 0.3);
+        }
+        .pain-section-bg {
+            background-color: #fef3c7; /* light yellow */
+            border-left-color: var(--bright-yellow);
+        }
+        .solution-section-bg {
+            background-color: #e0f2f7; /* light blue */
+            border-left-color: var(--electric-blue);
+        }
+        .apps-card {
+            background-color: #f7fee7; /* very light lime */
+            border: 1px solid var(--lime-green);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .apps-card:hover {
+            background-color: #ecfccb; /* lighter lime */
+            transform: translateY(-3px);
+        }
+        .what-makes-different-card {
+            background-color: #fff7ed; /* very light orange */
+            border-left: 4px solid var(--sunset-orange);
+            box-shadow: 0 5px 15px rgba(255, 127, 80, 0.1);
+        }
+        .stage-1-card {
+            background-color: #e0f7fa; /* light cyan */
+            border: 2px solid var(--electric-blue);
+        }
+        .stage-2-option-a-card {
+            background-color: #ecfccb; /* light lime green */
+            border: 2px solid var(--lime-green);
+        }
+        .stage-2-option-b-card {
+            background-color: #e3f2fd; /* light blue */
+            border: 2px solid var(--electric-blue);
+        }
+        .stage-3-customx-card {
+            background-color: #fff9c4; /* light yellow */
+            border: 2px solid var(--bright-yellow);
+        }
+        .stage-4-optimize-card {
+            background-color: #f3e5f5; /* light purple */
+            border: 2px solid var(--vivid-purple);
+        }
+        .results-section {
+            background-color: #dcfce7; /* light green */
+            border-left: 6px solid var(--lime-green);
+        }
+        .who-we-serve-section {
+            background-color: #fee2e2; /* light red/orange tint */
+            border-left: 6px solid var(--sunset-orange);
+        }
+        .tech-stack-subsection {
+            background-color: #f0f9ff; /* even lighter blue */
+            border-left: 3px solid var(--electric-blue);
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: background-color 0.3s ease;
+        }
+        .tech-stack-subsection:hover {
+            background-color: #e0f2fe;
+        }
+        .footer-gradient {
+            background: linear-gradient(90deg, var(--vivid-purple) 0%, var(--electric-blue) 100%);
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        /* Hover effects for list items */
+        li {
+            transition: color 0.2s ease;
+        }
+        li:hover {
+            color: var(--electric-blue); /* Hover on list items to highlight */
+        }
+        
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="max-w-5xl mx-auto p-4 md:p-8 lg:p-12 section-container mt-8 mb-16">
+
+        
+<!-- HEADER -->
+<header class="text-center mb-16 py-10 rounded-xl header-gradient animate-bounceIn">
+            <h1 class="text-5xl lg:text-6xl font-extrabold tracking-tight mb-4 drop-shadow-lg">BLUEBLOCKSS</h1>
+            <h2 class="text-4xl lg:text-5xl font-light mb-6">Zoho-Powered Automation for</h2>
+            <p class="text-2xl lg:text-3xl font-medium">
+                Manufacturing, Distribution & Logistics in Canada
+            </p>
+        </header>
+
+        
+<!-- INTRODUCTION -->
+<section class="mb-20 p-8 intro-gradient rounded-xl shadow-2xl border-l-8 border-r-8 border-bright-yellow animate-fade-in-up">
+            <h3 class="text-4xl font-bold text-dark-text mb-6">Modernize Your Industrial Operations</h3>
+            <p class="text-2xl font-semibold mb-8">
+                with Zoho + Custom Automation
+            </p>
+            <p class="mb-6 text-lg">
+                Most industrial SMBs in Canada run on outdated, disconnected systems. We help you
+                replace operational chaos with clarity — using Zoho’s cloud suite and custom
+                engineering designed specifically for manufacturing, distribution, logistics,
+                and warehouse operations.
+            </p>
+            <a href="#" class="inline-block px-10 py-5 text-xl rounded-full shadow-xl cta-button">
+                → Book a Free Modernization Assessment
+            </a>
+        </section>
+
+        
+<!-- THE PROBLEM: INDUSTRIAL OPERATIONS ARE BROKEN -->
+<section class="mb-20 section-container pain-section-bg border-l-8">
+            <h2 class="section-header text-sunset-orange">THE PROBLEM: INDUSTRIAL OPERATIONS ARE BROKEN</h2>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <p class="mb-6 font-semibold text-xl text-gray-800">Most industrial companies still rely on:</p>
+                    <ul class="space-y-4 pl-0">
+                        <li class="flex items-start text-lg"><span class="styled-bullet text-bright-yellow">•</span>Spreadsheets</li>
+                        <li class="flex items-start text-lg"><span class="styled-bullet text-bright-yellow">•</span>Paper forms</li>
+                        <li class="flex items-start text-lg"><span class="styled-bullet text-bright-yellow">•</span>Manual data entry</li>
+                        <li class="flex items-start text-lg"><span class="styled-bullet text-bright-yellow">•</span>Email-driven processes</li>
+                        <li class="flex items-start text-lg"><span class="styled-bullet text-bright-yellow">•</span>Outdated systems (Acomba, Sage, legacy tools)</li>
+                        <li class="flex items-start text-lg"><span class="styled-bullet text-bright-yellow">•</span>Tribal knowledge stored in people, not systems</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="mb-6 font-semibold text-xl text-gray-800">This leads to:</p>
+                    <ul class="space-y-4 pl-0">
+                        <li class="flex items-start text-lg"><span class="styled-bullet text-sunset-orange">•</span>Inventory inaccuracies</li>
+                        <li class="flex items-start text-lg"><span class="styled-bullet text-sunset-orange">•</span>Slow fulfillment cycles</li>
+                        <li class="flex items-start text-lg"><span class="styled-bullet text-sunset-orange">•</span>Lost or delayed orders</li>
+                        <li class="flex items-start text-lg"><span class="styled-bullet text-sunset-orange">•</span>Double data entry</li>
+                        <li class="flex items-start text-lg"><span class="styled-bullet text-sunset-orange">•</span>Zero real-time visibility</li>
+                        <li class="flex items-start text-lg"><span class="styled-bullet text-sunset-orange">•</span>Bottlenecks between sales, warehouse, and operations</li>
+                        <li class="flex items-start text-lg"><span class="styled-bullet text-sunset-orange">•</span>High labour costs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="mt-10 pt-6 border-t-2 border-bright-yellow text-xl font-bold text-gray-900">
+                Your teams work hard — but your systems hold them back.
+            </p>
+        </section>
+
+        
+<!-- THE BLUEBLOCKSS SOLUTION -->
+<section class="mb-20 section-container solution-section-bg border-l-8">
+            <h2 class="section-header text-electric-blue">THE BLUEBLOCKSS SOLUTION</h2>
+            <p class="mb-6 text-lg">
+                We modernize industrial operations using the complete Zoho ecosystem combined with
+                advanced engineering.
+            </p>
+
+            <ul class="space-y-3 mb-10 text-xl font-semibold text-gray-800 pl-0">
+                <li class="flex items-start"><span class="styled-check text-lime-green">✔</span> CRM + Inventory + Books</li>
+                <li class="flex items-start"><span class="styled-check text-lime-green">✔</span> Custom industrial apps with Zoho Creator</li>
+                <li class="flex items-start"><span class="styled-check text-lime-green">✔</span> Serverless automation with Zoho Catalyst</li>
+                <li class="flex items-start"><span class="styled-check text-lime-green">✔</span> Cross-department automation with Zoho Flow</li>
+                <li class="flex items-start"><span class="styled-check text-lime-green">✔</span> Real-time dashboards with Zoho Analytics</li>
+                <li class="flex items-start"><span class="styled-check text-lime-green">✔</span> Integrations with SAP, Oracle, Dynamics, Sage, Acomba</li>
+            </ul>
+
+            <p class="mt-10 pt-6 border-t-2 border-electric-blue text-xl font-bold text-gray-900">
+                The result is a modern, connected, automated operating system — without the $200k
+                ERP price tag.
+            </p>
+        </section>
+        
+        
+<!-- OUR 3-STAGE MODERNIZATION JOURNEY -->
+<section class="mb-20 section-container">
+            <h2 class="section-header">OUR 3-STAGE MODERNIZATION JOURNEY</h2>
+            <div class="space-y-12">
+                
+<!-- 1. STAGE 1 - Blueprint -->
+<div class="p-8 stage-1-card rounded-2xl shadow-lg hover:shadow-xl group">
+                    <h3 class="text-3xl font-extrabold text-electric-blue mb-4">1. Blueprint™ — Start Here</h3>
+                    <p class="text-base mb-6 pl-6 border-l-4 border-electric-blue group-hover:border-vivid-purple transition-colors">
+                        A structured discovery and architecture process that maps your workflows, identifies bottlenecks, and designs your future-state operating system.
+                    </p>
+                    <p class="font-medium text-gray-800 mb-2 text-lg">Outcome:</p>
+                    <p class="text-base pl-6 border-l-4 border-electric-blue font-bold text-gray-900 group-hover:border-vivid-purple transition-colors">
+                        Clarity, confidence, and a practical modernization roadmap.
+                    </p>
+                </div>
+
+                
+<!-- 2. STAGE 2 - Build Options -->
+<div class="p-8 section-container bg-gray-50 border-gray-300 rounded-2xl shadow-lg hover:shadow-xl">
+                    <h3 class="text-3xl font-extrabold text-vivid-purple mb-6">2. Build Your Modern Operating System</h3>
+                    <p class="font-bold text-xl mb-6 text-gray-900">Choose the right path for your business maturity and needs.</p>
+
+                    
+<!-- OPTION A - Industrial Core System™ -->
+<div class="p-6 mb-8 stage-2-option-a-card rounded-xl shadow-md hover:shadow-lg group">
+                        <h4 class="text-2xl font-bold text-lime-green mb-3">A. Industrial Core System™</h4>
+                        <p class="text-base mb-6 text-gray-700">
+                            A fast, foundational system built using core Zoho applications. Perfect for teams moving away from spreadsheets or outdated tools.
+                        </p>
+                        <p class="font-medium text-gray-800 mb-2 text-lg">Outcome:</p>
+                        <p class="text-base pl-6 border-l-4 border-lime-green font-bold text-gray-900 group-hover:border-electric-blue transition-colors">
+                            Immediate operational improvements and a scalable core system.
+                        </p>
+                    </div>
+
+                    
+<!-- OPTION B - Industrial OS™ — Full Modernization -->
+<div class="p-6 stage-2-option-b-card rounded-xl shadow-md hover:shadow-lg group">
+                        <h4 class="text-2xl font-bold text-electric-blue mb-4">B. Industrial OS™ — Full Modernization</h4>
+                        <p class="text-base mb-6 text-gray-700">
+                            Your end-to-end operational platform with Creator apps, Catalyst logic, cross-department automation, and custom industrial workflows.
+                        </p>
+                        <p class="font-medium text-gray-800 mb-2 text-lg">Outcome:</p>
+                        <p class="text-base pl-6 border-l-4 border-electric-blue font-bold text-gray-900 group-hover:border-lime-green transition-colors">
+                            A unified, automated, future-ready operation.
+                        </p>
+                    </div>
+
+                    
+<!-- OPTION C - Advanced: BlueBlockss CustomX™ -->
+<div class="p-6 mt-8 stage-3-customx-card rounded-xl shadow-md hover:shadow-lg group">
+                        <h4 class="text-2xl font-bold text-bright-yellow mb-4">C. Advanced: BlueBlockss CustomX™</h4>
+                        <p class="text-base mb-4 text-gray-700">
+                            Deep custom engineering beyond standard Zoho limits. Built using Zoho Creator, Zoho Catalyst, Python, APIs, serverless functions, and enterprise integrations.
+                        </p>
+                        
+                        <p class="font-medium text-gray-800 mb-2 text-lg">Perfect for companies needing:</p>
+                        <ul class="grid md:grid-cols-2 gap-x-8 gap-y-2 text-base list-disc list-inside ml-6 text-gray-700">
+                            <li>production systems</li>
+                            <li>warehouse automation</li>
+                            <li>dispatch & field service apps</li>
+                            <li>QC/inspection modules</li>
+                            <li>custom portals</li>
+                            <li>multi-system integrations</li>
+                            <li>specialized workflows</li>
+                        </ul>
+
+                        <p class="font-medium text-gray-800 mt-6 mb-2 text-lg">Outcome:</p>
+                        <p class="text-base pl-6 border-l-4 border-bright-yellow font-bold text-gray-900 group-hover:border-sunset-orange transition-colors">
+                            A fully tailored, enterprise-grade automation system.
+                        </p>
+                    </div>
+                </div>
+
+                
+<!-- 3. STAGE 3 - Optimize+ Retainer -->
+<div class="p-8 stage-4-optimize-card rounded-2xl shadow-lg hover:shadow-xl group">
+                    <h3 class="text-3xl font-extrabold text-vivid-purple mb-4">3. Optimize+ Retainer</h3>
+                    <p class="text-base mb-6 pl-6 border-l-4 border-vivid-purple group-hover:border-electric-blue transition-colors">
+                        Ongoing support, enhancements, analytics, automation updates, integrations, QA, and team training.
+                    </p>
+                    <p class="font-medium text-gray-800 mb-2 text-lg">Outcome:</p>
+                    <p class="text-base pl-6 border-l-4 border-vivid-purple font-bold text-gray-900 group-hover:border-electric-blue transition-colors">
+                        Continuous improvement and long-term stability.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        
+<!-- OUR MODERNIZATION FRAMEWORK — THE BLUEBLOCKSS 6-STEP METHOD -->
+<section class="mb-20 section-container who-we-serve-section">
+            <h2 class="section-header text-sunset-orange">OUR MODERNIZATION FRAMEWORK — THE BLUEBLOCKSS 6-STEP METHOD</h2>
+            <p class="mb-8 text-lg">
+                Every engagement follows our proven 6-step Blueprint™ Framework designed specifically for industrial operations:
+            </p>
+
+            <ol class="space-y-6 text-lg list-none pl-0">
+                <li class="p-4 rounded-lg bg-red-50 border-l-4 border-sunset-orange shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-xl font-bold text-sunset-orange mr-3">1</span>
+                    <span class="font-bold text-gray-900">Operational Discovery</span>
+                    <p class="text-base text-gray-700 ml-6 mt-1">We map your sales, warehouse, production, and fulfillment workflows.</p>
+                </li>
+                <li class="p-4 rounded-lg bg-red-50 border-l-4 border-sunset-orange shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-xl font-bold text-sunset-orange mr-3">2</span>
+                    <span class="font-bold text-gray-900">Bottleneck & Inefficiency Analysis</span>
+                    <p class="text-base text-gray-700 ml-6 mt-1">We identify gaps, delays, manual work, and failure points.</p>
+                </li>
+                <li class="p-4 rounded-lg bg-red-50 border-l-4 border-sunset-orange shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-xl font-bold text-sunset-orange mr-3">3</span>
+                    <span class="font-bold text-gray-900">System Architecture & Data Model</span>
+                    <p class="text-base text-gray-700 ml-6 mt-1">We design the future-state system using Zoho + custom engineering.</p>
+                </li>
+                <li class="p-4 rounded-lg bg-red-50 border-l-4 border-sunset-orange shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-xl font-bold text-sunset-orange mr-3">4</span>
+                    <span class="font-bold text-gray-900">Implementation & Automation Build</span>
+                    <p class="text-base text-gray-700 ml-6 mt-1">Creator apps, Catalyst logic, integrations, dashboards, workflows.</p>
+                </li>
+                <li class="p-4 rounded-lg bg-red-50 border-l-4 border-sunset-orange shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-xl font-bold text-sunset-orange mr-3">5</span>
+                    <span class="font-bold text-gray-900">Validation, Testing & Training</span>
+                    <p class="text-base text-gray-700 ml-6 mt-1">We ensure accuracy, compliance, and team readiness.</p>
+                </li>
+                <li class="p-4 rounded-lg bg-red-50 border-l-4 border-sunset-orange shadow-sm hover:shadow-md transition-shadow">
+                    <span class="text-xl font-bold text-sunset-orange mr-3">6</span>
+                    <span class="font-bold text-gray-900">Go-Live & Continuous Improvement</span>
+                    <p class="text-base text-gray-700 ml-6 mt-1">Smooth rollout + long-term optimization via Optimize+.</p>
+                </li>
+            </ol>
+            
+            <p class="mt-8 text-xl font-bold text-gray-900">
+                This structured, low-risk process is why industrial SMBs trust BlueBlockss for modernization.
+            </p>
+        </section>
+
+        
+<!-- WHY INDUSTRIAL SMBs CHOOSE BLUEBLOCKSS -->
+<section class="mb-20 section-container">
+            <h2 class="section-header">WHY INDUSTRIAL SMBs CHOOSE BLUEBLOCKSS</h2>
+
+            <div class="space-y-6">
+                
+                <div class="p-4 rounded-xl what-makes-different-card flex items-start group">
+                    <span class="styled-check group-hover:scale-125 transition-transform duration-300 text-lime-green">✔</span>
+                    <div class="flex-1">
+                        <p class="font-bold text-xl text-gray-900 group-hover:text-sunset-orange transition-colors">Industrial Focus</p>
+                        <p class="text-base text-gray-700">We serve only manufacturing, distribution, logistics, and related industries.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl what-makes-different-card flex items-start group">
+                    <span class="styled-check group-hover:scale-125 transition-transform duration-300 text-lime-green">✔</span>
+                    <div class="flex-1">
+                        <p class="font-bold text-xl text-gray-900 group-hover:text-sunset-orange transition-colors">17+ Years of Modernization Expertise</p>
+                        <p class="text-base text-gray-700">A leadership team with deep experience in enterprise automation, onshore/offshore delivery, and complex migrations.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl what-makes-different-card flex items-start group">
+                    <span class="styled-check group-hover:scale-125 transition-transform duration-300 text-lime-green">✔</span>
+                    <div class="flex-1">
+                        <p class="font-bold text-xl text-gray-900 group-hover:text-sunset-orange transition-colors">Zoho Ecosystem Mastery</p>
+                        <p class="text-base text-gray-700">From CRM and Inventory to Creator and Catalyst — we integrate everything into one unified system.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl what-makes-different-card flex items-start group">
+                    <span class="styled-check group-hover:scale-125 transition-transform duration-300 text-lime-green">✔</span>
+                    <div class="flex-1">
+                        <p class="font-bold text-xl text-gray-900 group-hover:text-sunset-orange transition-colors">Custom Engineering Capability</p>
+                        <p class="text-base text-gray-700 mb-4">We build advanced systems that Zoho alone can’t deliver:</p>
+                        <ul class="grid md:grid-cols-2 gap-x-8 gap-y-2 text-base list-disc list-inside ml-6 text-gray-600">
+                            <li>production modules</li>
+                            <li>warehouse automation</li>
+                            <li>dispatch apps</li>
+                            <li>QC workflows</li>
+                            <li>portals</li>
+                            <li>heavy logic and integrations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl what-makes-different-card flex items-start group">
+                    <span class="styled-check group-hover:scale-125 transition-transform duration-300 text-lime-green">✔</span>
+                    <div class="flex-1">
+                        <p class="font-bold text-xl text-gray-900 group-hover:text-sunset-orange transition-colors">ERP-Level Results, Without ERP Costs</p>
+                        <p class="text-base text-gray-700">Modern operations at a fraction of the cost of SAP or NetSuite.</p>
+                    </div>
+                </div>
+
+                <div class="p-4 rounded-xl what-makes-different-card flex items-start group">
+                    <span class="styled-check group-hover:scale-125 transition-transform duration-300 text-lime-green">✔</span>
+                    <div class="flex-1">
+                        <p class="font-bold text-xl text-gray-900 group-hover:text-sunset-orange transition-colors">Hybrid Delivery (Canada + Offshore)</p>
+                        <p class="text-base text-gray-700">Local discovery and architecture, global engineering scale.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        
+<!-- TYPICAL RESULTS OUR CLIENTS ACHIEVE -->
+<section class="mb-20 section-container results-section">
+            <h2 class="section-header text-lime-green">TYPICAL RESULTS OUR CLIENTS ACHIEVE</h2>
+
+            <ul class="space-y-3 mb-10 text-xl font-medium text-gray-800 pl-0">
+                <li class="flex items-start"><span class="styled-check text-lime-green">»</span> 30–60% fewer manual processes</li>
+                <li class="flex items-start"><span class="styled-check text-lime-green">»</span> 25–40% increase in fulfillment accuracy</li>
+                <li class="flex items-start"><span class="styled-check text-lime-green">»</span> 15–25% faster order cycle times</li>
+                <li class="flex items-start"><span class="styled-check text-lime-green">»</span> Real-time dashboards replacing manual reporting</li>
+                <li class="flex items-start"><span class="styled-check text-lime-green">»</span> Mobile warehouse & driver workflows</li>
+                <li class="flex items-start"><span class="styled-check text-lime-green">»</span> Greater transparency across departments</li>
+                <li class="flex items-start"><span class="styled-check text-lime-green">»</span> Reduced operational waste and labour costs</li>
+                <li class="flex items-start"><span class="styled-check text-lime-green">»</span> A scalable system ready for the next decade</li>
+            </ul>
+        </section>
+
+        
+<!-- WHO WE SERVE -->
+<section class="mb-20 section-container who-we-serve-section">
+            <h2 class="section-header text-sunset-orange">WHO WE SERVE</h2>
+
+            <div class="space-y-4 text-xl">
+                <p class="flex items-start"><span class="styled-check text-sunset-orange">»</span> Manufacturers</p>
+                <p class="flex items-start"><span class="styled-check text-sunset-orange">»</span> Distributors & wholesalers</p>
+                <p class="flex items-start"><span class="styled-check text-sunset-orange">»</span> Logistics & fleet operators</p>
+                <p class="flex items-start"><span class="styled-check text-sunset-orange">»</span> Fulfillment & warehouse operations</p>
+                <p class="flex items-start"><span class="styled-check text-sunset-orange">»</span> Industrial supply companies</p>
+            </div>
+            <p class="mt-8 text-lg font-bold">
+                Ideal size: $5M–$50M in annual revenue.
+            </p>
+        </section>
+
+        
+<!-- TECHNOLOGY WE USE -->
+<section class="mb-20 section-container solution-section-bg">
+            <h2 class="section-header text-electric-blue">TECHNOLOGY WE USE</h2>
+            <p class="mb-6 text-lg font-bold">Your transformation is built on:</p>
+
+            <div class="space-y-6">
+                <div class="p-4 rounded-xl bg-white shadow-md border-l-4 border-electric-blue">
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Zoho Core Apps</h4>
+                    <p class="text-base text-gray-700">CRM, Inventory, Books, Creator, Flow, Analytics, Catalyst</p>
+                </div>
+                <div class="p-4 rounded-xl bg-white shadow-md border-l-4 border-electric-blue">
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Supporting Apps</h4>
+                    <p class="text-base text-gray-700">Desk, WorkDrive, Sign, Cliq, People, Projects</p>
+                </div>
+                <div class="p-4 rounded-xl bg-white shadow-md border-l-4 border-electric-blue">
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Advanced Extensions</h4>
+                    <p class="text-base text-gray-700">Commerce, Subscriptions, Vault, Assist</p>
+                </div>
+                <div class="p-4 rounded-xl bg-white shadow-md border-l-4 border-electric-blue">
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Integrations</h4>
+                    <p class="text-base text-gray-700">SAP, Oracle, Dynamics 365, NetSuite, IBM, Sage, Acomba</p>
+                </div>
+                <div class="p-4 rounded-xl bg-white shadow-md border-l-4 border-electric-blue">
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Engineering stack</h4>
+                    <p class="text-base text-gray-700">Python, JavaScript, APIs, serverless functions, microservices, secure data pipelines</p>
+                </div>
+                <div class="p-4 rounded-xl bg-white shadow-md border-l-4 border-electric-blue">
+                    <h4 class="text-xl font-bold text-gray-900 mb-2">Security & Compliance</h4>
+                    <p class="text-base text-gray-700">PIPEDA aligned, SOC 2 aligned practices, data governance, RBAC, encryption</p>
+                </div>
+            </div>
+        </section>
+
+
+        
+<!-- FOOTER/CTA -->
+<footer class="text-center py-10 rounded-xl footer-gradient">
+            <h3 class="text-3xl font-extrabold mb-6">READY TO MODERNIZE YOUR OPERATIONS?</h3>
+            <p class="text-xl font-medium mb-6">
+                Let’s map your workflows, identify bottlenecks, and design the future of your operations.
+            </p>
+            <a href="#" class="inline-block px-10 py-5 text-xl rounded-full shadow-2xl bg-bright-yellow text-dark-text font-bold hover:bg-white transition-colors duration-300">
+                → Book Your Free Modernization Assessment
+            </a>
+            <p class="mt-4 text-sm opacity-70">Contact Us: info@blueblocks.ai</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
