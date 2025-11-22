@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About BlueBlockss</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Lucide Icons for checkmarks and visual elements -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Define Custom Colors */
+        :root {
+            --electric-blue: #0077FF; /* Primary */
+            --sunset-orange: #FF7F50; /* Accent 1 */
+            --lime-green: #32CD32; /* Accent 2 (Success) */
+            --vivid-purple: #8A2BE2; /* Accent 3 (Expertise) */
+        }
+        
+        /* Utility classes for new colors */
+        .text-electric-blue { color: var(--electric-blue); }
+        .bg-electric-blue { background-color: var(--electric-blue); }
+        .border-electric-blue { border-color: var(--electric-blue); }
+        .text-sunset-orange { color: var(--sunset-orange); }
+        .bg-sunset-orange { background-color: var(--sunset-orange); }
+        .text-lime-green { color: var(--lime-green); }
+        .bg-lime-green { background-color: var(--lime-green); }
+        .text-vivid-purple { color: var(--vivid-purple); }
+        .bg-vivid-purple { background-color: var(--vivid-purple); }
+
+        /* Custom Bullet List for Approach Section */
+        .approach-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            list-style: none; 
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .approach-list li::before {
+            content: '\2022'; /* Bullet point character */
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 900;
+            color: var(--vivid-purple); 
+            font-size: 1.25rem;
+        }
+
+        /* Numbered List for What We Do Section (Stylized 1-9) */
+        .service-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        }
+        .service-number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+            color: white;
+            background-color: var(--electric-blue);
+        }
+        .service-title {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 700;
+            color: var(--sunset-orange);
+            margin-bottom: 0.5rem;
+        }
+        .service-description {
+            color: #4b5563; /* text-gray-600 */
+        }
+        /* Style for sub-bullets inside service descriptions */
+        .service-description ul {
+            list-style-type: none;
+            padding-left: 1rem;
+            margin-top: 0.5rem;
+        }
+        .service-description ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+        .service-description ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--electric-blue);
+            font-size: 1rem;
+        }
+        
+        /* General content styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1f2937; /* dark gray text */
+        }
+        
+        /* Placeholder for images */
+        .placeholder-image {
+            width: 96px; 
+            height: 96px; 
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #d1d5db; /* light gray */
+            border: 4px solid var(--electric-blue);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 shadow-lg backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold text-electric-blue tracking-tight">BLUEBLOCKSS</h1>
+            <a href="#cta" class="px-6 py-2 bg-sunset-orange text-white font-semibold rounded-full shadow-lg hover:opacity-90 transition duration-300">
+                Contact Us
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section: Introduction and Approach -->
+    <section class="py-16 md:py-24 bg-electric-blue/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl sm:text-5xl font-extrabold mb-4 text-electric-blue">
+                ABOUT BLUEBLOCKSS
+            </h2>
+            <h3 class="text-2xl sm:text-3xl font-semibold mb-8 text-sunset-orange">
+                Modernizing Industrial Operations Across Canada
+            </h3>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Introduction Text -->
+                <div>
+                    <p class="text-lg text-gray-700 mb-6">
+                        BlueBlockss is a Canadian consulting firm specializing in
+                        industrial operations modernization using Zoho’s cloud ecosystem, custom
+                        engineering, advanced automation, AI-assisted insights, and legacy system
+                        migration.
+                    </p>
+                    <p class="text-xl font-medium text-gray-800 mb-6">
+                        We help manufacturing, distribution, logistics, and
+                        warehousing companies eliminate outdated, disconnected systems and replace them
+                        with modern, automated, scalable operational workflows.
+                    </p>
+                    <p class="text-xl font-bold text-vivid-purple mb-4">
+                        Our approach blends:
+                    </p>
+                    <ul class="approach-list grid sm:grid-cols-2 gap-y-2 text-gray-700">
+                        <li>Industrial operations expertise</li>
+                        <li>Enterprise-grade architecture</li>
+                        <li>Zoho ecosystem mastery</li>
+                        <li>Custom engineering (Creator + Catalyst + APIs)</li>
+                        <li>Data governance & compliance discipline</li>
+                        <li>Legacy system migration</li>
+                        <li>Onshore leadership + offshore scale</li>
+                    </ul>
+                    <p class="text-lg font-semibold text-gray-700 mt-6 pt-4 border-t border-gray-200">
+                        This combination enables industrial SMBs to operate with the
+                        clarity, speed, automation, and intelligence typically found only in large
+                        enterprises.
+                    </p>
+                </div>
+
+                <!-- Mission and Vision -->
+                <div class="space-y-6">
+                    <div class="p-6 rounded-xl bg-electric-blue shadow-xl border-b-4 border-vivid-purple">
+                        <h4 class="text-2xl font-bold mb-2 text-white">OUR MISSION</h4>
+                        <p class="text-lg text-gray-200">
+                            To modernize Canadian industrial companies with automation,
+                            AI, and scalable cloud systems that eliminate operational chaos and drive
+                            long-term efficiency.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-xl bg-sunset-orange shadow-xl border-b-4 border-lime-green">
+                        <h4 class="text-2xl font-bold mb-2 text-white">OUR VISION</h4>
+                        <p class="text-lg text-gray-200">
+                            To become Canada’s most trusted modernization partner for
+                            industrial SMBs by delivering integrated, automated, ERP-alternative systems
+                            powered by Zoho and custom engineering.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-white rounded-xl shadow-lg border border-gray-200">
+                        <h4 class="text-2xl font-bold mb-2 text-electric-blue">WHAT WE DO</h4>
+                        <p class="text-lg text-gray-700">
+                            BlueBlockss designs, builds, and supports modern industrial
+                            operating systems that replace manual processes, unify disconnected data, and
+                            create real-time, automated workflows.
+                        </p>
+                        <p class="text-lg text-gray-700 mt-4">
+                            We combine Zoho applications, custom engineering,
+                            automation, AI-assisted insights, and legacy migration expertise to deliver a
+                            complete transformation for industrial SMBs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services (What We Do) -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-3xl font-bold text-electric-blue mb-10 text-center">9 CORE MODERNIZATION SERVICES</h3>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-number bg-electric-blue">1</div>
+                    <h4 class="service-title">Sales → Quote → Order Modernization</h4>
+                    <div class="service-description">
+                        <p>We streamline front-office operations through:</p>
+                        <ul>
+                            <li>Lead → Deal → Quote → Order automation</li>
+                            <li>Pricing rules, approvals, and workflows</li>
+                            <li>Sales-to-operations synchronization</li>
+                            <li>Customer communication automation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-number bg-sunset-orange">2</div>
+                    <h4 class="service-title">Inventory, Warehousing & Fulfillment Systems</h4>
+                    <div class="service-description">
+                        <p>Using Zoho Inventory + custom Creator apps:</p>
+                        <ul>
+                            <li>Multi-warehouse stock control</li>
+                            <li>Purchasing & receiving workflows</li>
+                            <li>Pick/pack/ship automation</li>
+                            <li>Lot/batch tracking</li>
+                            <li>Mobile warehouse task apps</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-number bg-vivid-purple">3</div>
+                    <h4 class="service-title">Finance & Costing Automation</h4>
+                    <div class="service-description">
+                        <p>Built on Zoho Books + integrated processes:</p>
+                        <ul>
+                            <li>AP/AR automation</li>
+                            <li>Operational & landed costing</li>
+                            <li>Billing & expense workflows</li>
+                            <li>Financial accuracy + compliance</li>
+                            <li>Sales ↔ Inventory ↔ Finance integration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-number bg-electric-blue">4</div>
+                    <h4 class="service-title">Custom Industrial Applications (Zoho Creator)</h4>
+                    <div class="service-description">
+                        <p>We engineer industrial-grade applications such as:</p>
+                        <ul>
+                            <li>Production/assembly modules</li>
+                            <li>Work orders & job tracking</li>
+                            <li>QC/inspection workflows</li>
+                            <li>Field/driver dispatch apps</li>
+                            <li>Customer/vendor portals</li>
+                            <li>Maintenance logs & checklists</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-number bg-sunset-orange">5</div>
+                    <h4 class="service-title">Cross-Department Automation (Flow + Catalyst)</h4>
+                    <div class="service-description">
+                        <p>We eliminate bottlenecks between departments:</p>
+                        <ul>
+                            <li>Sales ↔ Operations</li>
+                            <li>Inventory ↔ Purchasing</li>
+                            <li>Finance ↔ Fulfillment</li>
+                            <li>Logistics ↔ Customer service</li>
+                            <li>Event-driven automation + heavy backend logic</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-number bg-vivid-purple">6</div>
+                    <h4 class="service-title">Real-Time Dashboards & Industrial Analytics</h4>
+                    <div class="service-description">
+                        <p>With Zoho Analytics:</p>
+                        <ul>
+                            <li>KPI dashboards</li>
+                            <li>Operational intelligence</li>
+                            <li>Forecasting</li>
+                            <li>Financial visibility</li>
+                            <li>Inventory analytics</li>
+                            <li>Production performance metrics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="service-card">
+                    <div class="service-number bg-electric-blue">7</div>
+                    <h4 class="service-title">Integrations & API Engineering</h4>
+                    <div class="service-description">
+                        <p>We integrate Zoho with legacy and enterprise systems such as:</p>
+                        <ul>
+                            <li>SAP</li>
+                            <li>Oracle</li>
+                            <li>Dynamics 365</li>
+                            <li>NetSuite</li>
+                            <li>IBM systems</li>
+                            <li>Sage</li>
+                            <li>Acomba</li>
+                            <li>QuickBooks</li>
+                            <li>Custom internal tools</li>
+                        </ul>
+                        <p class="mt-2">Includes ETL pipelines, API automation, and secure data flows.</p>
+                    </div>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="service-card">
+                    <div class="service-number bg-sunset-orange">8</div>
+                    <h4 class="service-title">Legacy System Migration (Major Differentiator)</h4>
+                    <div class="service-description">
+                        <p>We migrate clients from legacy systems to modern platforms:</p>
+                        <ul>
+                            <li>Access databases</li>
+                            <li>Excel-driven workflows</li>
+                            <li>Sage / Acomba</li>
+                            <li>QuickBooks Desktop</li>
+                            <li>Old ERP modules</li>
+                            <li>Custom-built legacy tools</li>
+                            <li>Client/server systems</li>
+                        </ul>
+                        <p class="mt-2">Migration includes:</p>
+                        <ul>
+                            <li>Data mapping & cleansing</li>
+                            <li>New data models</li>
+                            <li>Parallel run planning</li>
+                            <li>Cutover + go-live</li>
+                            <li>Rollback & disaster recovery</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 9 -->
+                <div class="service-card">
+                    <div class="service-number bg-vivid-purple">9</div>
+                    <h4 class="service-title">Ongoing Optimization & Support (Optimize+)</h4>
+                    <div class="service-description">
+                        <p>We ensure long-term stability and continuous improvement:</p>
+                        <ul>
+                            <li>Enhancements & new automations</li>
+                            <li>Creator app updates</li>
+                            <li>Catalyst logic optimization</li>
+                            <li>Dashboard improvements</li>
+                            <li>Error resolution</li>
+                            <li>Staff training</li>
+                            <li>Quarterly reviews</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-12 p-6 md:p-8 bg-lime-green/10 rounded-xl border-l-8 border-lime-green shadow-inner">
+                <p class="text-xl md:text-2xl font-extrabold text-lime-green">In One Sentence:</p>
+                <p class="text-lg md:text-xl text-gray-800 mt-2">
+                    We replace outdated, disconnected industrial systems with
+                    a modern, automated, AI-assisted operating platform built on Zoho + custom
+                    engineering + legacy migration expertise.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Team -->
+    <section class="py-16 md:py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-white mb-12 text-center border-b-2 border-sunset-orange pb-4">LEADERSHIP TEAM</h2>
+            
+            <div class="space-y-12">
+                
+                <!-- Leader 1: Jomis John -->
+                <div class="lg:flex bg-white rounded-xl shadow-2xl p-6 lg:p-10 items-start">
+                    <div class="flex-shrink-0 mb-6 lg:mb-0 lg:mr-8 text-center">
+                        <img src="https://placehold.co/96x96/0077FF/ffffff?text=JJ" alt="Jomis John" class="placeholder-image mx-auto">
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-3xl font-bold text-electric-blue mb-1">Founder & Principal Consultant — Jomis John</h3>
+                        <p class="text-lg font-semibold text-sunset-orange mb-4">
+                            Global Leader in Modernization, Automation, and AI-Enabled Operations
+                        </p>
+                        
+                        <p class="text-gray-700 mb-4">
+                            Jomis is a global leader in modernization, automation, and AI-enabled operations with over 17 years of experience delivering large-scale transformation programs across Canada, the United States, the Middle East, and Asia.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            He has led enterprise modernization initiatives for organizations including the Royal Bank of Canada (RBC), Tata Consultancy Services (TCS) Canada, and multiple manufacturing and distribution companies—spanning system migrations, automation engineering, workflow redesign, and operational optimization.
+                        </p>
+                        
+                        <p class="text-lg font-bold text-vivid-purple mt-4">His expertise includes:</p>
+                        <ul class="approach-list grid sm:grid-cols-2 gap-x-6 text-gray-600 mt-2">
+                            <li>Enterprise systems architecture</li>
+                            <li>Legacy system modernization & migration</li>
+                            <li>Workflow automation and industrial process optimization</li>
+                            <li>API engineering & microservices</li>
+                            <li>Applied AI and operational intelligence</li>
+                            <li>Data governance & compliance</li>
+                            <li>Onshore/offshore global delivery leadership</li>
+                        </ul>
+                        
+                        <p class="text-gray-700 mt-4">
+                            Jomis has also served as a lecturer and mentor at Conestoga College, Fanshawe College, and Confederation College, teaching Big Data Solution Architecture and guiding students in analytics, cloud modernization, and emerging technologies.
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            He is also the Founder of STEM AI Studio, an applied AI and STEM education initiative that builds workforce readiness and AI literacy for youth and educators.
+                        </p>
+                        <p class="text-gray-700 font-medium mb-4">
+                            His background in both enterprise transformation and AI-focused education gives him a unique ability to simplify complexity, lead change, and design modern systems that people actually adopt.
+                        </p>
+                        <p class="text-gray-700 font-bold">
+                            He founded BlueBlockss with a clear purpose:
+                            to bring enterprise-grade modernization and intelligent automation to
+                            Canadian industrial SMBs—without the high cost, complexity, or rigidity of
+                            traditional ERP systems.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Leader 2: Geevar Thambi -->
+                <div class="lg:flex bg-white rounded-xl shadow-2xl p-6 lg:p-10 items-start">
+                    <div class="flex-shrink-0 mb-6 lg:mb-0 lg:mr-8 text-center">
+                        <img src="https://placehold.co/96x96/FF7F50/ffffff?text=GT" alt="Geevar Thambi" class="placeholder-image mx-auto border-sunset-orange">
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-3xl font-bold text-electric-blue mb-1">Partner — Global Delivery & Business Solutions — Geevar Thambi</h3>
+                        <p class="text-lg font-semibold text-sunset-orange mb-4">
+                            CMA, CSCA, CPB | Financial Systems, Costing, and Automation Specialist
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            Geevar is a highly accomplished financial systems expert with deep experience in accounting automation, operational costing, inventory valuation, and financial workflow design for industrial businesses.
+                        </p>
+                        <p class="text-gray-700 font-medium mb-4">
+                            With a background that combines advanced accounting credentials (CMA, CSCA, CPB) and hands-on technical delivery experience, he brings a rare blend of financial discipline + automation engineering.
+                        </p>
+                        
+                        <p class="text-lg font-bold text-vivid-purple mt-4">His expertise includes:</p>
+                        <ul class="approach-list grid sm:grid-cols-2 gap-x-6 text-gray-600 mt-2">
+                            <li>Financial workflow automation (AP/AR, costing, accruals, month-end processes)</li>
+                            <li>Inventory costing & complex valuation methods</li>
+                            <li>ERP-to-Zoho financial migration</li>
+                            <li>Multi-system financial integrations (Sage, QuickBooks, Acomba, SAP)</li>
+                            <li>Data accuracy, financial controls & compliance</li>
+                            <li>Budgeting, approvals, auditability, and reconciliation flows</li>
+                            <li>Zoho Books, Inventory, CRM, Flow & Analytics configuration</li>
+                            <li>Cross-department workflow alignment (Sales ↔ Ops ↔ Finance)</li>
+                        </ul>
+
+                        <p class="text-gray-700 mt-4">
+                            At BlueBlockss, Geevar co-leads global delivery and business solutions, ensuring that every modernized operational system is:
+                        </p>
+                        <ul class="approach-list text-gray-700 font-semibold mt-2 ml-4">
+                            <li>Financially accurate</li>
+                            <li>Costing-aligned</li>
+                            <li>Audit-ready</li>
+                            <li>Compliant with best practices</li>
+                            <li>Mapped correctly across sales, operations, and finance</li>
+                        </ul>
+                        
+                        <p class="text-gray-700 mt-4">He oversees:</p>
+                        <ul class="approach-list text-gray-600 mt-2 ml-4">
+                            <li>Offshore development teams</li>
+                            <li>Solution configuration & functional design</li>
+                            <li>QA validation of financial and inventory data flows</li>
+                            <li>Inventory reconciliation & costing alignment</li>
+                            <li>Financial logic inside Creator and Catalyst applications</li>
+                        </ul>
+                        
+                        <p class="text-gray-700 font-bold mt-4">
+                            For industrial SMBs, Geevar provides what ERP implementations usually lack:
+                            financial accuracy, cost transparency, and operational alignment built into
+                            every workflow from day one.
+                        </p>
+                        <p class="text-gray-700 mt-2">
+                            His leadership ensures that BlueBlockss solutions are not only automated and modern—but financially correct, scalable, and ready for long-term growth.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other Leaders -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-vivid-purple text-center">
+                    <img src="https://placehold.co/64x64/8A2BE2/ffffff?text=A" alt="Alex" class="placeholder-image w-16 h-16 mx-auto mb-3 border-vivid-purple">
+                    <h4 class="text-xl font-bold text-electric-blue">Partner — Functional Consulting & Global Delivery — Alex</h4>
+                    <p class="text-sm font-semibold text-sunset-orange mt-1 mb-3">Zoho Functional Consultant | Multi-Module Specialist</p>
+                    <p class="text-gray-700 text-sm">Alex leads functional discovery, blueprinting, multi-module workflow design, and operational alignment. He ensures sales, operations, warehouse, and finance processes translate cleanly into Zoho’s ecosystem and custom applications. He co-manages offshore delivery teams and ensures functional excellence across all projects.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-electric-blue text-center">
+                    <img src="https://placehold.co/64x64/0077FF/ffffff?text=AJ" alt="Ajith" class="placeholder-image w-16 h-16 mx-auto mb-3 border-electric-blue">
+                    <h4 class="text-xl font-bold text-electric-blue">Client Engagement Manager — Ajith</h4>
+                    <p class="text-sm font-semibold text-sunset-orange mt-1 mb-3">Engagement & Project Coordination Specialist</p>
+                    <p class="text-gray-700 text-sm">Ajith manages client communication, requirements intake, project timelines, workshop coordination, demos, UAT cycles, and overall engagement structure. He ensures every engagement is organized, transparent, and aligned with client expectations.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-sunset-orange text-center">
+                    <img src="https://placehold.co/64x64/FF7F50/ffffff?text=S" alt="Sanoop" class="placeholder-image w-16 h-16 mx-auto mb-3 border-sunset-orange">
+                    <h4 class="text-xl font-bold text-electric-blue">Zoho Solution Architect & Delivery Manager — Sanoop</h4>
+                    <p class="text-sm font-semibold text-sunset-orange mt-1 mb-3">Zoho Creator, Catalyst, and API Architecture</p>
+                    <p class="text-gray-700 text-sm">Sanoop specializes in Zoho Creator applications, Catalyst serverless workflows, API integrations, and multi-module workflow architecture. He leads technical delivery, ensuring systems are scalable, secure, and optimized for real industrial operations.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-lime-green text-center">
+                    <img src="https://placehold.co/64x64/32CD32/ffffff?text=JJ" alt="John J" class="placeholder-image w-16 h-16 mx-auto mb-3 border-lime-green">
+                    <h4 class="text-xl font-bold text-electric-blue">IT Project Manager — John J</h4>
+                    <p class="text-sm font-semibold text-sunset-orange mt-1 mb-3">Project Planning & Delivery Governance</p>
+                    <p class="text-gray-700 text-sm">John handles project planning, sprint execution, risk tracking, cross-team coordination, and delivery governance. He ensures predictable timelines, structured execution, and smooth alignment between onshore and offshore teams.</p>
+                </div>
+            </div>
+
+            <!-- Extended Delivery Team -->
+            <div class="mt-16 pt-8 border-t border-gray-700">
+                <h3 class="text-3xl font-bold text-white mb-6">EXTENDED DELIVERY TEAM</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-white">
+                    <div class="p-4 bg-gray-800 rounded-lg border-l-4 border-electric-blue">
+                        <p class="text-lg font-semibold mb-1">1. Cloud Engineer</p>
+                        <p class="text-sm text-gray-400">Serverless functions, secure deployment, API integrations, cloud environment setup.</p>
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-lg border-l-4 border-sunset-orange">
+                        <p class="text-lg font-semibold mb-1">2. Full-Stack Developer</p>
+                        <p class="text-sm text-gray-400">Portals, dashboards, advanced modules, microservices, custom UI/UX.</p>
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-lg border-l-4 border-vivid-purple">
+                        <p class="text-lg font-semibold mb-1">3. IT Security & Compliance Consultant</p>
+                        <p class="text-sm text-gray-400">RBAC, encryption, audit controls, PIPEDA & SOC2-aligned best practices.</p>
+                    </div>
+                    <div class="p-4 bg-gray-800 rounded-lg border-l-4 border-lime-green">
+                        <p class="text-lg font-semibold mb-1">4. Support Engineer</p>
+                        <p class="text-sm text-gray-400">Operational support, bug resolution, workflow tuning, environment monitoring.</p>
+                    </div>
+                </div>
+                <p class="text-white text-lg mt-8 font-medium">
+                    Together, the BlueBlockss team delivers
+                    the scale and capability of a consulting firm — with the specialization and
+                    agility SMBs require.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Clients Trust BlueBlockss -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-sunset-orange mb-10 text-center">WHY CLIENTS TRUST BLUEBLOCKSS</h2>
+            
+            <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-xl font-medium text-gray-700">
+                <li class="p-4 bg-electric-blue/5 rounded-lg flex items-center shadow-sm border-l-4 border-electric-blue">
+                    <i data-lucide="factory" class="w-6 h-6 text-electric-blue mr-3 flex-shrink-0"></i>
+                    Industrial operations specialization
+                </li>
+                <li class="p-4 bg-electric-blue/5 rounded-lg flex items-center shadow-sm border-l-4 border-electric-blue">
+                    <i data-lucide="trending-up" class="w-6 h-6 text-electric-blue mr-3 flex-shrink-0"></i>
+                    17+ years modernization expertise
+                </li>
+                <li class="p-4 bg-electric-blue/5 rounded-lg flex items-center shadow-sm border-l-4 border-electric-blue">
+                    <i data-lucide="code" class="w-6 h-6 text-electric-blue mr-3 flex-shrink-0"></i>
+                    Zoho + custom engineering mastery
+                </li>
+                <li class="p-4 bg-electric-blue/5 rounded-lg flex items-center shadow-sm border-l-4 border-electric-blue">
+                    <i data-lucide="bot" class="w-6 h-6 text-electric-blue mr-3 flex-shrink-0"></i>
+                    AI-assisted insights & automation
+                </li>
+                <li class="p-4 bg-electric-blue/5 rounded-lg flex items-center shadow-sm border-l-4 border-electric-blue">
+                    <i data-lucide="shield-check" class="w-6 h-6 text-electric-blue mr-3 flex-shrink-0"></i>
+                    Secure, compliant architecture
+                </li>
+                <li class="p-4 bg-electric-blue/5 rounded-lg flex items-center shadow-sm border-l-4 border-electric-blue">
+                    <i data-lucide="globe" class="w-6 h-6 text-electric-blue mr-3 flex-shrink-0"></i>
+                    Hybrid delivery (Canada + Offshore)
+                </li>
+                <li class="p-4 bg-electric-blue/5 rounded-lg flex items-center shadow-sm border-l-4 border-electric-blue">
+                    <i data-lucide="compass" class="w-6 h-6 text-electric-blue mr-3 flex-shrink-0"></i>
+                    Proven Blueprint™ methodology
+                </li>
+                <li class="p-4 bg-electric-blue/5 rounded-lg flex items-center shadow-sm border-l-4 border-electric-blue">
+                    <i data-lucide="calendar-check" class="w-6 h-6 text-electric-blue mr-3 flex-shrink-0"></i>
+                    Clear outcomes, predictable delivery
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="cta" class="py-20 bg-electric-blue">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-lime-green">READY TO MODERNIZE YOUR OPERATIONS?</h2>
+            <p class="text-xl font-medium mb-8 text-white">
+                Let’s build the future of your
+                operations — with automation, clarity, and a modern Zoho-powered operating
+                system.
+            </p>
+            
+            <div class="space-y-4">
+                <a href="mailto:info@blueblocks.ai" class="inline-block px-10 py-4 bg-sunset-orange text-white text-xl font-bold rounded-full shadow-xl hover:bg-sunset-orange/90 transition duration-300 transform hover:scale-[1.05]">
+                    📩 info@blueblocks.ai
+                </a>
+                <p class="text-lg font-medium text-gray-200">
+                    <a href="https://blueblocks.ai" target="_blank" class="text-white hover:underline">🌐 blueblocks.ai</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 border-t border-electric-blue">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-400">
+            <p>&copy; 2024 BlueBlockss. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

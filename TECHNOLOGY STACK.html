@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueBlockss Technology Stack</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Define Custom Colors (Consistent with previous pages) */
+        :root {
+            --electric-blue: #0077FF; /* Primary focus, representing Technology/Stack */
+            --sunset-orange: #FF7F50; /* Accent (Engineering/Custom) */
+            --lime-green: #32CD32; /* Success/Outcome */
+            --vivid-purple: #8A2BE2; /* Secondary Accent (Zoho/Logic) */
+        }
+        
+        /* Utility classes for new colors */
+        .text-electric-blue { color: var(--electric-blue); }
+        .bg-electric-blue { background-color: var(--electric-blue); }
+        .border-electric-blue { border-color: var(--electric-blue); }
+        .text-sunset-orange { color: var(--sunset-orange); }
+        .bg-sunset-orange { background-color: var(--sunset-orange); }
+        .text-lime-green { color: var(--lime-green); }
+        .bg-lime-green { background-color: var(--lime-green); }
+        .text-vivid-purple { color: var(--vivid-purple); }
+        .bg-vivid-purple { background-color: var(--vivid-purple); }
+        
+        /* Custom list style for checkmarks (Intro Stack / Outcomes) */
+        .check-list li {
+            position: relative;
+            padding-left: 2rem;
+            list-style: none; /* Remove default marker */
+            margin-bottom: 0.5rem;
+        }
+        .check-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 900;
+            color: var(--lime-green); 
+            font-size: 1.25rem;
+        }
+
+        /* Custom list style for standard bullet points (Used in sub-lists) */
+        .solution-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            list-style: none; /* Remove default marker */
+        }
+        .solution-list li::before {
+            content: '\2022'; /* Bullet point character */
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+            color: var(--vivid-purple); 
+            font-size: 1.25rem;
+        }
+        
+        /* Hero Background Styling - Focus on technical architecture (grid/lines) */
+        .hero-bg {
+            background: #f7f7f7;
+            background-image: linear-gradient(0deg, transparent 24%, rgba(0, 0, 0, .05) 25%, rgba(0, 0, 0, .05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, .05) 75%, rgba(0, 0, 0, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(0, 0, 0, .05) 25%, rgba(0, 0, 0, .05) 26%, transparent 27%, transparent 74%, rgba(0, 0, 0, .05) 75%, rgba(0, 0, 0, .05) 76%, transparent 77%, transparent);
+            background-size: 50px 50px;
+        }
+
+        /* Numbered list for Sections 1-4 */
+        .numbered-list {
+            counter-reset: item;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .numbered-list > li {
+            counter-increment: item;
+            margin-bottom: 3.5rem;
+            padding-left: 0; 
+            position: relative;
+            border-left: 4px solid var(--electric-blue); /* Visual guide for flow */
+            padding-left: 2rem;
+            padding-top: 1rem;
+        }
+        .numbered-list > li > div {
+            padding-left: 0; 
+        }
+        .numbered-list > li::before {
+            content: counter(item);
+            position: absolute;
+            left: -18px; /* Position the circle over the line */
+            top: 0.5rem;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--electric-blue);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.25rem;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        /* Styling for the outcome paragraph */
+        .outcome-box {
+            border-left: 6px solid var(--sunset-orange);
+            background-color: #fffbeb;
+        }
+    </style>
+</head>
+<body class="font-[Inter] text-gray-800 bg-white">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 shadow-lg backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold text-electric-blue tracking-tight">BLUEBLOCKSS</h1>
+            <a href="#cta" class="px-6 py-2 bg-sunset-orange text-white font-semibold rounded-full shadow-lg hover:opacity-90 transition duration-300 ease-in-out">
+                Book Assessment
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-20 md:py-24 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Main Title Block -->
+            <div class="max-w-4xl mx-auto">
+                <p class="text-xs font-extrabold uppercase tracking-widest text-electric-blue mb-2">TECHNOLOGY STACK</p>
+                <h2 class="text-5xl sm:text-6xl font-extrabold leading-tight mb-4 text-electric-blue">
+                    BLUEBLOCKSS TECHNOLOGY STACK
+                </h2>
+                <p class="text-2xl sm:text-3xl font-semibold mb-6 text-sunset-orange">
+                    Zoho Engineering + Custom Development + Enterprise Integrations
+                </p>
+                <h3 class="text-xl sm:text-2xl font-medium text-gray-700 mb-12">
+                    The Technology Behind Your Modern Industrial Operating System
+                </h3>
+            </div>
+            
+            <!-- Core Pitch Block -->
+            <div class="max-w-5xl mx-auto bg-white p-8 rounded-xl shadow-2xl border-t-8 border-vivid-purple text-left">
+                <p class="text-lg text-gray-700 mb-6">
+                    Your operations depend on more than software — they depend
+                    on architecture, automation, integration, and security working perfectly
+                    together.
+                </p>
+                <p class="text-xl font-bold text-gray-800 mb-6">
+                    BlueBlockss specializes in delivering a robust, scalable,
+                    secure technology foundation built for industrial operations using Zoho’s cloud
+                    ecosystem + advanced engineering.
+                </p>
+                
+                <!-- Core Stack List -->
+                <div class="grid md:grid-cols-2 gap-x-6 text-gray-700 text-lg">
+                    <ul class="solution-list text-base">
+                        <li>Zoho engineering expertise</li>
+                        <li>Custom application development</li>
+                        <li>Serverless compute</li>
+                        <li>Python & JS development</li>
+                        <li>API integrations</li>
+                    </ul>
+                    <ul class="solution-list text-base">
+                        <li>Data pipelines</li>
+                        <li>Security & governance</li>
+                        <li>Enterprise system bridging</li>
+                        <li>AI-driven analytics</li>
+                    </ul>
+                </div>
+                <p class="text-lg text-gray-700 mt-6">
+                    Below is the complete breakdown.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Stack Breakdown -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <ul class="numbered-list">
+                
+                <!-- 1. ZOHO ENGINEERING EXPERTISE -->
+                <li>
+                    <div>
+                        <h2 class="text-3xl font-bold text-electric-blue mb-4">ZOHO ENGINEERING EXPERTISE</h2>
+                        <p class="text-lg text-gray-700 mb-6">
+                            BlueBlockss has in-house specialists across the full Zoho
+                            technical ecosystem:
+                        </p>
+                        
+                        <div class="grid lg:grid-cols-2 gap-x-8 gap-y-6">
+                            <!-- Deluge / Creator / Catalyst -->
+                            <div class="p-4 bg-vivid-purple/5 rounded-lg">
+                                <p class="text-xl font-semibold text-vivid-purple mb-2">✔ Deluge (Zoho’s scripting language)</p>
+                                <p class="text-sm text-gray-700 mb-4">Custom logic for CRM, Inventory, Books, Creator, and Flow.</p>
+                                
+                                <p class="text-xl font-semibold text-vivid-purple mb-2">✔ Zoho Creator (Low-Code Industrial Apps)</p>
+                                <p class="text-sm text-gray-700">Used for:</p>
+                                <ul class="solution-list text-sm text-gray-600 ml-4">
+                                    <li>Production systems</li>
+                                    <li>QC & inspection</li>
+                                    <li>Warehouse task automation</li>
+                                    <li>Dispatch workflows</li>
+                                    <li>Portals (customer/vendor/operations)</li>
+                                </ul>
+
+                                <p class="text-xl font-semibold text-vivid-purple mt-4 mb-2">✔ Zoho Catalyst (Serverless Automation & Microservices)</p>
+                                <p class="text-sm text-gray-700">We use Catalyst for:</p>
+                                <ul class="solution-list text-sm text-gray-600 ml-4">
+                                    <li>Heavy backend logic</li>
+                                    <li>ETL workflows</li>
+                                    <li>Real-time triggers</li>
+                                    <li>API orchestration</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Flow / Analytics / Infra / Governance -->
+                            <div class="p-4 bg-vivid-purple/5 rounded-lg">
+                                <ul class="solution-list space-y-4">
+                                    <li>
+                                        <p class="text-xl font-semibold text-vivid-purple">✔ Zoho Flow (Automation Orchestration)</p>
+                                        <p class="text-sm text-gray-600 ml-4">Cross-department workflows that connect sales, warehouse, production, dispatch, and finance.</p>
+                                    </li>
+                                    <li>
+                                        <p class="text-xl font-semibold text-vivid-purple">✔ Zoho Analytics (Dashboards + AI Insights)</p>
+                                        <ul class="solution-list text-sm text-gray-600 ml-4">
+                                            <li>Real-time KPIs</li>
+                                            <li>Predictive analytics</li>
+                                            <li>Zia AI-assisted intelligence</li>
+                                            <li>Forecasting</li>
+                                            <li>Operational visibility</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="text-xl font-semibold text-vivid-purple">✔ Zoho Infrastructure Best Practices</p>
+                                        <ul class="solution-list text-sm text-gray-600 ml-4">
+                                            <li>Secure deployments</li>
+                                            <li>Multi-environment setup (Dev → UAT → Prod)</li>
+                                            <li>Backup & recovery planning</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p class="text-xl font-semibold text-vivid-purple">✔ Zoho Data Governance</p>
+                                        <ul class="solution-list text-sm text-gray-600 ml-4">
+                                            <li>Roles & permissions</li>
+                                            <li>Data residency preferences</li>
+                                            <li>Audit controls</li>
+                                            <li>PIPEDA-aligned practices</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-4 rounded-lg outcome-box">
+                            <p class="text-lg font-bold text-sunset-orange">Outcome:</p>
+                            <p class="text-lg text-gray-800">A modern, secure, scalable Zoho-powered operational backbone.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- 2. ADVANCED DEVELOPMENT & ENGINEERING -->
+                <li>
+                    <div>
+                        <h2 class="text-3xl font-bold text-electric-blue mb-4">ADVANCED DEVELOPMENT & ENGINEERING</h2>
+                        <p class="text-lg text-gray-700 mb-6">
+                            For deeper automation needs, we extend beyond Zoho’s limits:
+                        </p>
+                        
+                        <div class="grid lg:grid-cols-2 gap-x-8 gap-y-6">
+                            <!-- Python / JS / APIs -->
+                            <div class="p-4 bg-sunset-orange/5 rounded-lg">
+                                <p class="text-xl font-semibold text-sunset-orange mb-2">✔ Python</p>
+                                <ul class="solution-list text-sm text-gray-600 ml-4">
+                                    <li>ETL processing</li>
+                                    <li>Data transformation pipelines</li>
+                                    <li>Complex business logic</li>
+                                    <li>Machine-learning prep workflows</li>
+                                </ul>
+                                
+                                <p class="text-xl font-semibold text-sunset-orange mt-4 mb-2">✔ JavaScript</p>
+                                <ul class="solution-list text-sm text-gray-600 ml-4">
+                                    <li>Enhanced UI/UX</li>
+                                    <li>Client-side validations</li>
+                                    <li>Custom components inside Creator</li>
+                                </ul>
+                                
+                                <p class="text-xl font-semibold text-sunset-orange mt-4 mb-2">✔ REST & SOAP APIs</p>
+                                <p class="text-sm text-gray-700">For connecting:</p>
+                                <ul class="solution-list text-sm text-gray-600 ml-4">
+                                    <li>ERP systems</li>
+                                    <li>Accounting systems</li>
+                                    <li>Legacy tools</li>
+                                    <li>E-commerce platforms</li>
+                                    <li>Logistics systems</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Microservices / Databases -->
+                            <div class="p-4 bg-sunset-orange/5 rounded-lg">
+                                <p class="text-xl font-semibold text-sunset-orange mb-2">✔ Microservices & Serverless Functions</p>
+                                <p class="text-sm text-gray-700">(Catalyst, AWS Lambda)</p>
+                                <ul class="solution-list text-sm text-gray-600 ml-4">
+                                    <li>Real-time event handling</li>
+                                    <li>Queue-based automation</li>
+                                    <li>Smart workflow routing</li>
+                                    <li>High-volume processing</li>
+                                </ul>
+
+                                <p class="text-xl font-semibold text-sunset-orange mt-4 mb-2">✔ SQL/NoSQL Database Architecture</p>
+                                <p class="text-sm text-gray-700">For long-term scalability, backups, and hybrid systems.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-4 rounded-lg outcome-box">
+                            <p class="text-lg font-bold text-sunset-orange">Outcome:</p>
+                            <p class="text-lg text-gray-800">Your system isn’t just configured — it’s engineered.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- 3. ENTERPRISE INTEGRATIONS -->
+                <li>
+                    <div>
+                        <h2 class="text-3xl font-bold text-electric-blue mb-4">ENTERPRISE INTEGRATIONS</h2>
+                        <p class="text-lg text-gray-700 mb-6">
+                            BlueBlockss integrates Zoho with major enterprise platforms:
+                        </p>
+                        
+                        <div class="grid lg:grid-cols-2 gap-x-8 gap-y-6">
+                            <!-- Platforms -->
+                            <div class="p-4 bg-electric-blue/5 rounded-lg">
+                                <ul class="solution-list text-lg text-gray-800 space-y-2">
+                                    <li>✔ SAP</li>
+                                    <li>✔ Oracle</li>
+                                    <li>✔ Microsoft Dynamics 365</li>
+                                    <li>✔ NetSuite</li>
+                                    <li>✔ IBM Legacy Systems</li>
+                                    <li>✔ Sage</li>
+                                    <li>✔ Acomba</li>
+                                    <li>✔ Custom Internal Tools</li>
+                                    <li>✔ On-Prem & Hybrid Environments</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Methods -->
+                            <div class="p-4 bg-electric-blue/5 rounded-lg">
+                                <p class="text-xl font-semibold text-electric-blue mb-2">Integration methods:</p>
+                                <ul class="solution-list text-lg text-gray-800 space-y-2 ml-4">
+                                    <li>REST/SOAP</li>
+                                    <li>Webhooks</li>
+                                    <li>Microservices</li>
+                                    <li>ETL pipelines</li>
+                                    <li>Custom APIs</li>
+                                    <li>Event-driven automation</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-4 rounded-lg outcome-box">
+                            <p class="text-lg font-bold text-sunset-orange">Outcome:</p>
+                            <p class="text-lg text-gray-800">Your tech stack becomes a unified ecosystem instead of disconnected islands.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- 4. SECURITY, PRIVACY & COMPLIANCE -->
+                <li>
+                    <div>
+                        <h2 class="text-3xl font-bold text-electric-blue mb-4">SECURITY, PRIVACY & COMPLIANCE</h2>
+                        <p class="text-lg text-gray-700 mb-6">
+                            Industrial SMBs require enterprise-grade protection. We deliver:
+                        </p>
+                        
+                        <div class="grid lg:grid-cols-3 gap-x-8 gap-y-6">
+                            <!-- Cybersecurity Controls -->
+                            <div class="p-4 bg-lime-green/5 rounded-lg">
+                                <p class="text-xl font-semibold text-lime-green mb-2">Cybersecurity Controls</p>
+                                <ul class="solution-list text-sm text-gray-600 ml-4">
+                                    <li>Strong authentication</li>
+                                    <li>Role/permission hardening</li>
+                                    <li>Separation of duties</li>
+                                    <li>OAuth/API key rotation</li>
+                                    <li>Encryption (in transit & at rest)</li>
+                                    <li>Secure Catalyst logic</li>
+                                    <li>Logging & auditability</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Data Compliance -->
+                            <div class="p-4 bg-lime-green/5 rounded-lg">
+                                <p class="text-xl font-semibold text-lime-green mb-2">Data Compliance</p>
+                                <p class="text-sm text-gray-700">Aligned with:</p>
+                                <ul class="solution-list text-sm text-gray-600 ml-4">
+                                    <li>PIPEDA (Canada)</li>
+                                    <li>SOC 2–aligned practices</li>
+                                    <li>GDPR principles (if required)</li>
+                                    <li>Data residency preferences</li>
+                                    <li>Secure migration protocols</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Quality Assurance & Testing -->
+                            <div class="p-4 bg-lime-green/5 rounded-lg">
+                                <p class="text-xl font-semibold text-lime-green mb-2">Quality Assurance & Testing</p>
+                                <ul class="solution-list text-sm text-gray-600 ml-4">
+                                    <li>Dev → UAT → Prod environments</li>
+                                    <li>Automated workflow testing</li>
+                                    <li>Regression testing</li>
+                                    <li>Disaster recovery planning</li>
+                                    <li>Documentation & SOPs</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-4 rounded-lg outcome-box">
+                            <p class="text-lg font-bold text-sunset-orange">Outcome:</p>
+                            <p class="text-lg text-gray-800">Your operations stay secure, compliant, and stable.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- 5. WHY OUR TECHNOLOGY MATTERS -->
+            <div class="mt-16 pt-8 border-t-2 border-sunset-orange">
+                <h2 class="text-3xl font-bold text-sunset-orange mb-6">WHY OUR TECHNOLOGY MATTERS</h2>
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Industrial companies rely on workflows that are:
+                        </p>
+                        <div class="grid grid-cols-2 text-lg font-medium text-gray-800">
+                            <ul class="solution-list ml-4">
+                                <li>complex</li>
+                                <li>mission-critical</li>
+                                <li>unique</li>
+                            </ul>
+                            <ul class="solution-list ml-4">
+                                <li>multi-department</li>
+                                <li>high-volume</li>
+                                <li>real-time</li>
+                            </ul>
+                        </div>
+                        <p class="text-xl font-bold text-gray-800 mt-6">
+                            Generic IT solutions can’t handle this.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-electric-blue/10 rounded-xl shadow-lg">
+                        <p class="text-lg text-gray-700 mb-4">
+                            BlueBlockss builds industrial-grade systems using:
+                        </p>
+                        <ul class="solution-list text-lg text-gray-800 space-y-2 ml-4">
+                            <li>Zoho’s operational tools</li>
+                            <li>Catalyst’s serverless power</li>
+                            <li>Creator’s low-code custom apps</li>
+                            <li>Python’s engineering flexibility</li>
+                            <li>API-driven integrations</li>
+                            <li>Secure governance</li>
+                            <li>AI-enhanced insights</li>
+                        </ul>
+                        <p class="text-lg font-bold text-electric-blue mt-6">
+                            This combination is what makes BlueBlockss a true ERP-alternative
+                            modernization partner, not just a software installer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="cta" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-lime-green">READY TO BUILD A FUTURE-READY TECHNOLOGY STACK?</h2>
+            <p class="text-xl font-medium mb-8 text-white">
+                Your industrial operations deserve a platform built with
+                real engineering discipline — not off-the-shelf shortcuts.
+            </p>
+            
+            <a href="#" class="inline-block px-10 py-4 bg-sunset-orange text-white text-xl font-bold rounded-full shadow-xl hover:bg-sunset-orange/90 transition duration-300 ease-in-out transform hover:scale-[1.05] mb-4">
+                ➡ Book a Free Modernization Assessment
+            </a>
+            <p class="text-lg font-medium text-gray-200 mt-2">
+                ➡ <a href="mailto:info@blueblocks.ai" class="text-electric-blue hover:underline">info@blueblocks.ai</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 BlueBlockss. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
