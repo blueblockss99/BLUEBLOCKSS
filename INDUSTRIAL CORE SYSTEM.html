@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Core System™ - BlueBlockss</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Define Custom Colors (Consistent with previous pages) */
+        :root {
+            --electric-blue: #0077FF; /* Primary CTA, Headers, Key Accents */
+            --sunset-orange: #FF7F50; /* Primary Accent for this page */
+            --lime-green: #32CD32; /* Success/Results/Checkmarks */
+            --vivid-purple: #8A2BE2; /* Secondary Accent, Section Background */
+        }
+        
+        /* Utility classes for new colors */
+        .text-electric-blue { color: var(--electric-blue); }
+        .bg-electric-blue { background-color: var(--electric-blue); }
+        .border-electric-blue { border-color: var(--electric-blue); }
+        .text-sunset-orange { color: var(--sunset-orange); }
+        .bg-sunset-orange { background-color: var(--sunset-orange); }
+        .text-lime-green { color: var(--lime-green); }
+        .bg-lime-green { background-color: var(--lime-green); }
+        .text-vivid-purple { color: var(--vivid-purple); }
+        .bg-vivid-purple { background-color: var(--vivid-purple); }
+        
+        /* Custom list style for checkmarks (Outcomes, When to Choose) */
+        .check-list li {
+            position: relative;
+            padding-left: 2rem;
+            list-style: none; /* Remove default marker */
+            margin-bottom: 0.5rem;
+        }
+        .check-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 900;
+            color: var(--lime-green); 
+            font-size: 1.25rem;
+        }
+
+        /* Custom list style for standard bullet points (What Is / Who It's For / What's Included sub-lists) */
+        .solution-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            list-style: none; /* Remove default marker */
+        }
+        .solution-list li::before {
+            content: '\2022'; /* Bullet point character */
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+            color: var(--sunset-orange); 
+            font-size: 1.25rem;
+        }
+        
+        /* Hero Background Styling */
+        .hero-bg {
+            /* Using a slightly different cool gradient to differentiate the page, emphasizing speed/foundation */
+            background: linear-gradient(135deg, #f0f8ff 0%, #e0f7ff 100%);
+        }
+
+        /* Numbered list for 'What's Included' */
+        .numbered-list {
+            counter-reset: item;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .numbered-list > li {
+            counter-increment: item;
+            margin-bottom: 2rem;
+            padding-left: 0; /* Let the container handle padding */
+            position: relative;
+        }
+        .numbered-list > li > div {
+            padding-left: 2rem; /* Indent the content */
+        }
+        .numbered-list > li::before {
+            content: counter(item) ".";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--electric-blue);
+        }
+    </style>
+</head>
+<body class="font-[Inter] text-gray-800 bg-white">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 shadow-lg backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold text-electric-blue tracking-tight">BLUEBLOCKSS</h1>
+            <a href="#cta" class="px-6 py-2 bg-sunset-orange text-white font-semibold rounded-full shadow-lg hover:opacity-90 transition duration-300 ease-in-out">
+                Start Modernization
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-20 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Main Title Block -->
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl sm:text-6xl font-extrabold leading-tight mb-4 text-sunset-orange">
+                    INDUSTRIAL CORE SYSTEM™
+                </h2>
+                <p class="text-2xl sm:text-3xl font-semibold mb-8 text-gray-700">
+                    Your Fast, Foundational ERP-Alternative System
+                </p>
+                <h3 class="text-xl sm:text-2xl font-medium text-gray-600 mb-12">
+                    Built on Zoho. Designed for Industrial SMBs. Ready in Weeks.
+                </h3>
+            </div>
+            
+            <!-- Core Pitch Block -->
+            <div class="max-w-5xl mx-auto bg-white p-8 rounded-xl shadow-2xl border-t-8 border-electric-blue text-left">
+                <p class="text-lg text-gray-700 mb-6">
+                    The Industrial Core System™ is the fastest way for
+                    small and mid-sized manufacturers, distributors, and logistics companies to
+                    move off spreadsheets, paper processes, and outdated tools — and onto a modern,
+                    connected, cloud-based operating system.
+                </p>
+                <p class="text-xl font-bold text-sunset-orange mb-6">
+                    It provides the essential building blocks of an
+                    ERP-alternative system without the heavy cost, long timelines, or complexity of
+                    traditional ERPs.
+                </p>
+                <p class="text-lg text-gray-700">
+                    This is the ideal starting point after Blueprint™ for
+                    companies who need quick results and a scalable foundation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is the Industrial Core System? -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-electric-blue mb-6 border-b-2 pb-2 border-electric-blue/50">
+                WHAT IS THE INDUSTRIAL CORE SYSTEM™?
+            </h2>
+            
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12">
+                <div>
+                    <p class="text-xl text-gray-700 mb-6 font-semibold">
+                        A streamlined, fast-deployment setup of Zoho’s core operational applications:
+                    </p>
+                    <!-- Zoho Core Apps List -->
+                    <div class="grid sm:grid-cols-2 gap-x-6 text-gray-700 text-lg mb-8">
+                        <ul class="solution-list">
+                            <li>Zoho CRM — Sales → Quote → Order</li>
+                            <li>Zoho Inventory — Stock, warehouses, fulfillment</li>
+                            <li>Zoho Books — Billing, AP/AR workflows</li>
+                        </ul>
+                        <ul class="solution-list">
+                            <li>Zoho Flow — Basic cross-department automation</li>
+                            <li>Zoho Analytics — Core KPIs & dashboards</li>
+                        </ul>
+                    </div>
+                    
+                    <p class="text-xl text-gray-700 mb-6 font-semibold">
+                        Plus foundational elements:
+                    </p>
+                    <!-- Foundational Elements List -->
+                    <div class="grid sm:grid-cols-2 gap-x-6 text-gray-700 text-lg mb-8">
+                        <ul class="solution-list">
+                            <li>Security setup</li>
+                            <li>Roles & permissions</li>
+                            <li>Data structure configuration</li>
+                        </ul>
+                        <ul class="solution-list">
+                            <li>Basic automations</li>
+                            <li>Light Creator app (optional)</li>
+                            <li>Go-Live training & support</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-8 lg:mt-0 p-6 bg-sunset-orange/10 rounded-xl shadow-md self-center">
+                    
+                    <p class="text-lg font-bold text-gray-800 mt-4">
+                        It is not a full ERP replacement — instead, it is the fastest
+                        path toward operational modernization.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-vivid-purple mb-8 border-b-2 pb-2 border-vivid-purple/50">
+                WHO IT’S FOR
+            </h2>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="p-6 bg-vivid-purple/10 rounded-xl shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">
+                        The Industrial Core System™ is ideal for companies that:
+                    </h3>
+                    <ul class="solution-list text-lg text-gray-800 space-y-2">
+                        <li>Run operations on Excel, paper, or emails</li>
+                        <li>Use Acomba, Sage, or lightweight tools</li>
+                        <li>Have no automation between sales, warehouse, and finance</li>
+                        <li>Want rapid modernization without major disruption</li>
+                        <li>Need early wins before investing in full Industrial OS™</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-700">
+                        Perfect for:
+                    </h3>
+                    <div class="grid grid-cols-2 text-lg text-gray-800">
+                        <ul class="solution-list">
+                            <li>Small manufacturers</li>
+                            <li>Distributors</li>
+                            <li>Logistics & fleet operators</li>
+                        </ul>
+                        <ul class="solution-list">
+                            <li>Warehouses</li>
+                            <li>Industrial supply operations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included (Detailed List) -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-sunset-orange mb-8 border-b-2 pb-2 border-sunset-orange/50">
+                WHAT’S INCLUDED
+            </h2>
+            <div class="grid lg:grid-cols-2 gap-x-12 gap-y-6">
+                <ul class="numbered-list">
+                    <!-- 1. Zoho CRM Setup -->
+                    <li class="p-4 bg-white rounded-lg shadow-md border-t-4 border-sunset-orange">
+                        <div>
+                            <p class="text-xl font-bold text-gray-900 mb-2">Zoho CRM Setup</p>
+                            <p class="text-gray-700 mb-3">Sales → Quotes → Orders</p>
+                            <ul class="solution-list text-sm text-gray-600">
+                                <li>Lead intake + pipeline setup</li>
+                                <li>Quote templates</li>
+                                <li>Automated follow-ups</li>
+                                <li>Basic approval workflows</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 2. Zoho Inventory Setup -->
+                    <li class="p-4 bg-white rounded-lg shadow-md border-t-4 border-sunset-orange">
+                        <div>
+                            <p class="text-xl font-bold text-gray-900 mb-2">Zoho Inventory Setup</p>
+                            <p class="text-gray-700 mb-3">A scalable warehouse & stock foundation</p>
+                            <ul class="solution-list text-sm text-gray-600">
+                                <li>Multi-location warehouse setup</li>
+                                <li>Stock tracking & adjustments</li>
+                                <li>Basic reorder points</li>
+                                <li>Fulfillment workflows</li>
+                                <li>Item master organization</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 3. Zoho Books Configuration -->
+                    <li class="p-4 bg-white rounded-lg shadow-md border-t-4 border-sunset-orange">
+                        <div>
+                            <p class="text-xl font-bold text-gray-900 mb-2">Zoho Books Configuration</p>
+                            <p class="text-gray-700 mb-3">Finance workflows aligned to operations</p>
+                            <ul class="solution-list text-sm text-gray-600">
+                                <li>AP/AR setup</li>
+                                <li>Invoice templates</li>
+                                <li>Payment workflows</li>
+                                <li>Banking rules</li>
+                                <li>Tax configuration</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 4. Cross-Department Automation (Zoho Flow) -->
+                    <li class="p-4 bg-white rounded-lg shadow-md border-t-4 border-sunset-orange">
+                        <div>
+                            <p class="text-xl font-bold text-gray-900 mb-2">Cross-Department Automation (Zoho Flow)</p>
+                            <ul class="solution-list text-sm text-gray-600">
+                                <li>CRM → Inventory handoff</li>
+                                <li>PO → Receiving</li>
+                                <li>Sales → Fulfillment notifications</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="numbered-list">
+                    <!-- 5. Core Dashboards (Zoho Analytics) -->
+                    <li class="p-4 bg-white rounded-lg shadow-md border-t-4 border-sunset-orange">
+                        <div>
+                            <p class="text-xl font-bold text-gray-900 mb-2">Core Dashboards (Zoho Analytics)</p>
+                            <ul class="solution-list text-sm text-gray-600">
+                                <li>Sales KPIs</li>
+                                <li>Inventory levels</li>
+                                <li>Order status tiles</li>
+                                <li>Fulfillment insights</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 6. Optional Basic Creator App -->
+                    <li class="p-4 bg-white rounded-lg shadow-md border-t-4 border-sunset-orange">
+                        <div>
+                            <p class="text-xl font-bold text-gray-900 mb-2">Optional Basic Creator App</p>
+                            <p class="text-gray-700 mb-3">One simple custom app, such as:</p>
+                            <ul class="solution-list text-sm text-gray-600">
+                                <li>Inspection form</li>
+                                <li>Intake form</li>
+                                <li>Work tracking</li>
+                                <li>Driver checklist</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 7. Security & Governance -->
+                    <li class="p-4 bg-white rounded-lg shadow-md border-t-4 border-sunset-orange">
+                        <div>
+                            <p class="text-xl font-bold text-gray-900 mb-2">Security & Governance</p>
+                            <ul class="solution-list text-sm text-gray-600">
+                                <li>Roles & permissions</li>
+                                <li>Audit controls</li>
+                                <li>Data access configuration</li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 8. Go-Live, QA & Training -->
+                    <li class="p-4 bg-white rounded-lg shadow-md border-t-4 border-sunset-orange">
+                        <div>
+                            <p class="text-xl font-bold text-gray-900 mb-2">Go-Live, QA & Training</p>
+                            <ul class="solution-list text-sm text-gray-600">
+                                <li>UAT support</li>
+                                <li>Team training</li>
+                                <li>Hypercare launch support</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outcomes You Can Expect -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-lime-green mb-6 border-b-2 pb-2 border-lime-green/50">
+                OUTCOMES YOU CAN EXPECT
+            </h2>
+            <div class="grid lg:grid-cols-2 gap-x-12 gap-y-4">
+                <ul class="check-list text-xl text-gray-800 space-y-2">
+                    <li>Faster quoting & order processing</li>
+                    <li>Better inventory accuracy</li>
+                    <li>Reduced admin workload</li>
+                    <li>Connected workflows (CRM → Inventory → Books)</li>
+                </ul>
+                <ul class="check-list text-xl text-gray-800 space-y-2">
+                    <li>Clear visibility across sales, warehouse, and finance</li>
+                    <li>A scalable foundation for Industrial OS™</li>
+                    <li>Immediate operational improvements within weeks</li>
+                </ul>
+            </div>
+            <p class="text-lg text-gray-700 mt-8">
+                This system gives you real results quickly — with the ability to expand into advanced automation later.
+            </p>
+        </div>
+    </section>
+
+    <!-- How It Fits In Your Transformation / When to Choose -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12">
+            
+            <!-- How It Fits -->
+            <div>
+                <h2 class="text-3xl font-bold text-electric-blue mb-6 border-b-2 pb-2 border-electric-blue/50">
+                    HOW IT FITS IN YOUR TRANSFORMATION
+                </h2>
+                <p class="text-xl text-gray-700 mb-4">After Blueprint™, you choose between:</p>
+                <p class="text-2xl font-bold text-sunset-orange mb-2">
+                    Option A: Industrial Core System™
+                </p>
+                <p class="text-lg text-gray-600 mb-6">
+                    Fast, foundational, scalable.
+                </p>
+                <p class="text-2xl font-bold text-vivid-purple mb-2">
+                    Option B: Industrial OS™
+                </p>
+                <p class="text-lg text-gray-600 mb-6">
+                    Full modernization with Creator apps, Catalyst automation, enterprise integrations.
+                </p>
+                <p class="text-lg text-gray-700 font-semibold mt-4">
+                    Most clients begin with Industrial Core System™ unless they need full-scale automation right away.
+                </p>
+            </div>
+
+            <!-- When to Choose -->
+            <div>
+                <h2 class="text-3xl font-bold text-sunset-orange mb-6 border-b-2 pb-2 border-sunset-orange/50">
+                    WHEN TO CHOOSE THE INDUSTRIAL CORE SYSTEM™
+                </h2>
+                <ul class="solution-list text-xl text-gray-800 space-y-2">
+                    <li>You need modernization fast</li>
+                    <li>You want to replace spreadsheets and paper now</li>
+                    <li>You want to avoid high ERP costs</li>
+                    <li>You want a connected system but not deep customization yet</li>
+                    <li>You want a system that can grow into Industrial OS™ later</li>
+                </ul>
+                <p class="text-lg text-gray-700 font-semibold mt-8">
+                    If you need deep customization, automation, or unique workflows — Industrial OS™ or CustomX™ will be the better fit.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Comes Next? -->
+    <section class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-vivid-purple mb-6 border-b-2 pb-2 border-vivid-purple/50">
+                WHAT COMES NEXT?
+            </h2>
+            <p class="text-xl text-gray-700 mb-6">
+                Once the Industrial Core System™ is live, you can scale into:
+            </p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-lg text-gray-800">
+                <p class="font-semibold p-4 bg-white rounded-lg shadow-md border-t-4 border-vivid-purple">
+                    Industrial OS™ (full operating system)
+                </p>
+                <p class="font-semibold p-4 bg-white rounded-lg shadow-md border-t-4 border-electric-blue">
+                    CustomX™ (custom engineering)
+                </p>
+                <p class="font-semibold p-4 bg-white rounded-lg shadow-md border-t-4 border-lime-green">
+                    Optimize+ (ongoing enhancements)
+                </p>
+            </div>
+            <p class="text-lg text-gray-700 font-semibold mt-8">
+                Your modernization journey stays predictable and structured.
+            </p>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="cta" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-sunset-orange">READY TO BUILD YOUR CORE SYSTEM?</h2>
+            <p class="text-xl font-medium mb-8 text-white">
+                Let’s replace operational chaos with a connected, modern
+                foundation your teams can rely on.
+            </p>
+            
+            <a href="#" class="inline-block px-10 py-4 bg-electric-blue text-white text-xl font-bold rounded-full shadow-xl hover:bg-electric-blue/90 transition duration-300 ease-in-out transform hover:scale-[1.05] mb-4">
+                ➡ Book Your Blueprint™ Consultation
+            </a>
+            <p class="text-lg font-medium text-gray-200">
+                ➡ <a href="mailto:info@blueblocks.ai" class="text-sunset-orange hover:underline">info@blueblocks.ai</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 BlueBlockss. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
